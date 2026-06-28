@@ -1,0 +1,35 @@
+<footer class="footer">
+  <div class="footer-brand">
+    <div class="footer-logo">
+      <div class="footer-logo-mark">A</div>
+      <span class="footer-logo-text">{{ .Site.Title }}</span>
+    </div>
+    <p class="footer-description">{{ i18n "footer_description" }}</p>
+    <p class="footer-copyright">{{ i18n "footer_copyright" }}</p>
+  </div>
+
+  <div class="footer-links">
+    <div class="footer-column">
+      <div class="footer-column-heading">{{ i18n "footer_konten" }}</div>
+      <a href="{{ .Site.Home.RelPermalink }}" class="footer-column-link">{{ i18n "nav_artikel" }}</a>
+      <a href="{{ .Site.Home.RelPermalink }}" class="footer-column-link">{{ i18n "nav_kategori" }}</a>
+      <a href="{{ relLangURL "tentang" }}" class="footer-column-link">{{ i18n "nav_tentang" }}</a>
+    </div>
+    <div class="footer-column">
+      <div class="footer-column-heading">{{ i18n "footer_newsletter" }}</div>
+      <a href="{{ relLangURL "berlangganan" }}" class="footer-column-link">{{ i18n "footer_berlangganan" }}</a>
+      <span class="footer-column-link">{{ i18n "footer_arsip_digest" }}</span>
+    </div>
+    <div class="footer-column">
+      <div class="footer-column-heading">{{ i18n "footer_bahasa" }}</div>
+      {{ $currentLang := .Language.Lang }}
+      {{ range .Site.Home.AllTranslations }}
+        {{ if eq .Language.Lang $currentLang }}
+          <span class="footer-column-link" style="font-weight:600;color:var(--text-primary)">{{ .Language.Label | default .Language.Lang }}</span>
+        {{ else }}
+          <a href="{{ .RelPermalink }}" class="footer-column-link">{{ .Language.Label | default .Language.Lang }}</a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</footer>

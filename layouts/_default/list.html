@@ -1,0 +1,51 @@
+{{ define "main" }}
+<div class="page-wrapper">
+  {{/* Hero */}}
+  <section class="hero">
+    <h1 class="hero-heading">{{ .Site.Params.subtitle }}</h1>
+    <p class="hero-subtitle">{{ i18n "subscribe_hero_desc" }}</p>
+    <form class="hero-form" action="{{ relLangURL "berlangganan" }}" method="get">
+      <input type="email" class="hero-form-input" placeholder="{{ i18n "subscribe_placeholder" }}" name="email" required>
+      <button type="submit" class="hero-form-button">
+        <span>{{ i18n "subscribe_button" }}</span>
+        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+    </form>
+  </section>
+
+  {{ $locale := .Language.Lang }}
+  {{ $allPages := where .Site.RegularPages "Section" "posts" }}
+  {{ $localPages := where $allPages "Language.Lang" $locale }}
+
+  {{/* Featured Posts */}}
+  {{ $featured := where $localPages "Params.featured" true }}
+  {{ if $featured }}
+  <section class="featured-section">
+    <div class="featured-header">
+      <span class="featured-title">{{ i18n "featured_title" }}</span>
+      {{ if gt (len $featured) 1 }}
+      <a href="#" class="featured-see-all">{{ i18n "see_all" }}</a>
+      {{ end }}
+    </div>
+    {{ range $featured }}
+      {{ partial "featured-posts" . }}
+    {{ end }}
+  </section>
+  {{ end }}
+
+  {{/* Post List */}}
+  <section class="post-list">
+    <div class="post-filter">
+      <span class="post-filter-tab active">{{ i18n "filter_all" }}</span>
+    </div>
+    <div class="post-rows">
+      {{ range $localPages.ByDate.Reverse }}
+        {{ partial "post-card" . }}
+      {{ end }}
+    </div>
+  </section>
+</div>
+{{ end }}

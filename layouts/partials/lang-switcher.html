@@ -1,0 +1,12 @@
+<div class="navbar-lang-switcher">
+  {{ $currentLang := .Site.Language.Lang }}
+  {{ range .Site.Home.AllTranslations }}
+    <a href="{{ .RelPermalink }}" class="navbar-lang{{ if eq .Language.Lang $currentLang }} active{{ end }}"
+       lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}">
+      {{ upper .Language.Lang }}
+    </a>
+    {{ if ne .Language.Lang "en" }}
+    <span class="navbar-lang-sep">|</span>
+    {{ end }}
+  {{ end }}
+</div>

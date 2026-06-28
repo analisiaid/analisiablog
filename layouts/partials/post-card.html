@@ -1,0 +1,24 @@
+<article class="post-row">
+  <div class="post-row-category">
+    {{ with .Params.categories }}{{ index . 0 }}{{ end }}
+  </div>
+  <h3 class="post-row-title">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </h3>
+  <div class="post-row-author">
+    {{ with .Params.author }}{{ . }}{{ end }}
+  </div>
+  <div class="post-row-meta">
+    <svg width="13" height="13" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <polyline points="12 6 12 12 16 14"></polyline>
+    </svg>
+    <span class="post-row-date">{{ .Date.Format "2 Jan 2006" }}{{ if .ReadingTime }} · {{ .ReadingTime }}{{ i18n "min_read" }}{{ end }}</span>
+  </div>
+  <div class="post-row-arrow">
+    <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="7" y1="17" x2="17" y2="7"></line>
+      <polyline points="7 7 17 7 17 17"></polyline>
+    </svg>
+  </div>
+</article>

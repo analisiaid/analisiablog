@@ -1,0 +1,66 @@
+# Navigation
+nav_artikel: "Articles"
+nav_kategori: "Categories"
+nav_tentang: "About"
+
+# Subscribe
+subscribe_cta: "Subscribe to Newsletter"
+subscribe_placeholder: "Your email address"
+subscribe_button: "Subscribe"
+subscribe_success: "Thanks! Check your inbox."
+subscribe_hero_title: "Guides, case studies, and performance marketing tips."
+subscribe_hero_desc: "Proven strategies to increase ROAS from the Analisia team. Weekly newsletter, straight to your inbox."
+
+# Homepage
+featured_title: "Editor's Pick"
+see_all: "See all"
+filter_all: "All"
+
+# Post
+read_next: "Read Next"
+table_of_contents: "Table of Contents"
+published: "Published"
+reading_time: "min read"
+min_read: "m"
+by: "by"
+categories: "Categories"
+tags: "Tags"
+
+# Footer
+footer_description: "A performance marketing blog by Analisia. Published bilingually, ID and EN."
+footer_konten: "Content"
+footer_newsletter: "Newsletter"
+footer_berlangganan: "Subscribe"
+footer_arsip_digest: "Digest archive"
+footer_bahasa: "Language"
+footer_copyright: "© 2026 Analisia. blog.analisia.id"
+
+# Subscribe page
+subscribe_page_title: "One email a week. Zero fluff."
+subscribe_page_desc: "Guides, case studies, and performance marketing tips you can apply immediately — curated by the Analisia team every Thursday morning."
+subscribe_benefit_1: "Real case studies with actual ROAS and CPA numbers"
+subscribe_benefit_2: "Google Ads & Meta Ads tactics tested on client accounts"
+subscribe_benefit_3: "No spam. Unsubscribe anytime in one click"
+subscribe_social_proof: "Read by 3,200+ marketers every week"
+subscribe_name_label: "Name"
+subscribe_name_placeholder: "Your name"
+subscribe_email_label: "Email"
+subscribe_email_placeholder: "name@email.com"
+subscribe_button_text: "Subscribe now"
+subscribe_cta_headline: "Get tactics like this every week"
+subscribe_cta_desc: "Weekly performance marketing digest, straight to your inbox."
+subscribe_note: "Single opt-in · immediate activation · protected by Turnstile"
+
+# Subscribe success
+subscribe_success_title: "Thanks!"
+subscribe_success_body: "Check your inbox — we just sent a welcome email. Your first weekly digest arrives Thursday morning."
+subscribe_success_fallback: "Didn't receive an email? Check your spam folder or sign up again."
+
+# About
+about_title: "We write about what actually moves the numbers."
+about_desc: "Analisia Blog is an open journal from Analisia performance marketing agency — where we share frameworks, experiments, and lessons from managing client ad spend every day."
+
+# Common
+read_more: "Read more"
+updated: "Updated"
+minute_read: "min read"

@@ -1,0 +1,87 @@
+baseURL = "https://blog.analisia.id"
+defaultContentLanguage = "id"
+defaultContentLanguageInSubdir = false
+title = "Blog Analisia"
+
+disableKinds = ["RSS"]
+
+[params]
+  brandAccent = "#FF4C1E"
+  brandAccentLight = "#fff1ed"
+  brandAccentBorder = "#ffd9ce"
+  textPrimary = "#111111"
+  textSecondary = "#666666"
+  textMuted = "#999999"
+  border = "#e5e5e5"
+  background = "#ffffff"
+  fontHeading = "Plus Jakarta Sans"
+  fontBody = "Inter"
+  fontCode = "JetBrains Mono"
+  maxContentWidth = "680px"
+  tocWidth = "260px"
+  pageMaxWidth = "1200px"
+
+[languages]
+  [languages.id]
+    label = "Indonesia"
+    locale = "id-ID"
+    weight = 1
+    title = "Blog Analisia"
+    [languages.id.params]
+      subtitle = "Panduan, studi kasus, dan tips performance marketing"
+      locale = "id_ID"
+    [[languages.id.menu.main]]
+      identifier = "artikel"
+      name = "Artikel"
+      url = "/"
+      weight = 1
+    [[languages.id.menu.main]]
+      identifier = "kategori"
+      name = "Kategori"
+      url = "/"
+      weight = 2
+    [[languages.id.menu.main]]
+      identifier = "tentang"
+      name = "Tentang"
+      url = "/tentang/"
+      weight = 3
+  [languages.en]
+    label = "English"
+    locale = "en-US"
+    weight = 2
+    contentDir = "content/en"
+    title = "Analisia Blog"
+    [languages.en.params]
+      subtitle = "Guides, case studies, and performance marketing tips"
+      locale = "en_US"
+    [[languages.en.menu.main]]
+      identifier = "artikel"
+      name = "Articles"
+      url = "/en/"
+      weight = 1
+    [[languages.en.menu.main]]
+      identifier = "kategori"
+      name = "Categories"
+      url = "/en/"
+      weight = 2
+    [[languages.en.menu.main]]
+      identifier = "tentang"
+      name = "About"
+      url = "/en/about/"
+      weight = 3
+
+[permalinks]
+  posts = "/:slug/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"

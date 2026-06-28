@@ -1,0 +1,66 @@
+# Navigation
+nav_artikel: "Artikel"
+nav_kategori: "Kategori"
+nav_tentang: "Tentang"
+
+# Subscribe
+subscribe_cta: "Berlangganan Newsletter"
+subscribe_placeholder: "Alamat email kamu"
+subscribe_button: "Daftar"
+subscribe_success: "Terima kasih! Cek email kamu."
+subscribe_hero_title: "Panduan, studi kasus, dan tips performance marketing."
+subscribe_hero_desc: "Strategi yang terbukti meningkatkan ROAS dari tim Analisia. Newsletter mingguan, langsung ke inbox kamu."
+
+# Homepage
+featured_title: "Pilihan Editor"
+see_all: "Lihat semua"
+filter_all: "Semua"
+
+# Post
+read_next: "Baca Selanjutnya"
+table_of_contents: "Daftar Isi"
+published: "Diterbitkan"
+reading_time: "menit baca"
+min_read: "m"
+by: "oleh"
+categories: "Kategori"
+tags: "Tags"
+
+# Footer
+footer_description: "Blog performance marketing dari agensi Analisia. Terbit dwibahasa, ID dan EN."
+footer_konten: "Konten"
+footer_newsletter: "Newsletter"
+footer_berlangganan: "Berlangganan"
+footer_arsip_digest: "Arsip digest"
+footer_bahasa: "Bahasa"
+footer_copyright: "© 2026 Analisia. blog.analisia.id"
+
+# Subscribe page
+subscribe_page_title: "Satu email seminggu. Nol fluff."
+subscribe_page_desc: "Panduan, studi kasus, dan tips performance marketing yang bisa langsung kamu terapkan — dikurasi tim Analisia tiap Kamis pagi."
+subscribe_benefit_1: "Studi kasus nyata dengan angka ROAS dan CPA yang sebenarnya"
+subscribe_benefit_2: "Taktik Google Ads & Meta Ads yang sudah teruji di akun klien"
+subscribe_benefit_3: "Tanpa spam. Berhenti berlangganan kapan saja dalam satu klik"
+subscribe_social_proof: "Dibaca 3.200+ marketer setiap minggu"
+subscribe_name_label: "Nama"
+subscribe_name_placeholder: "Nama kamu"
+subscribe_email_label: "Email"
+subscribe_email_placeholder: "nama@email.com"
+subscribe_button_text: "Daftar sekarang"
+subscribe_cta_headline: "Dapatkan taktik seperti ini tiap minggu"
+subscribe_cta_desc: "Digest mingguan performance marketing, langsung ke inbox kamu."
+subscribe_note: "Single opt-in · langsung aktif · dilindungi Turnstile"
+
+# Subscribe success
+subscribe_success_title: "Terima kasih!"
+subscribe_success_body: "Cek email kamu — kami baru saja mengirim email selamat datang. Digest mingguan pertama tiba Kamis pagi."
+subscribe_success_fallback: "Tidak menerima email? Cek folder spam atau daftar ulang."
+
+# About
+about_title: "Kami menulis tentang apa yang benar-benar menggerakkan angka."
+about_desc: "Blog Analisia adalah catatan terbuka dari agensi performance marketing Analisia — tempat kami membagikan kerangka kerja, eksperimen, dan pelajaran dari mengelola anggaran iklan klien setiap hari."
+
+# Common
+read_more: "Baca selengkapnya"
+updated: "Diperbarui"
+minute_read: "menit baca"
