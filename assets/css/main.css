@@ -983,7 +983,7 @@ img {
   gap: 8px;
 }
 
-.subscribe-cta-heading {
+.subscribe-cta-block .subscribe-cta-heading {
   font-family: var(--font-heading);
   font-size: 24px;
   font-weight: 700;
@@ -991,7 +991,7 @@ img {
   color: #ffffff;
 }
 
-.subscribe-cta-desc {
+.subscribe-cta-block .subscribe-cta-desc {
   font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.5;
