@@ -28,17 +28,19 @@ export async function onRequest(context) {
   if (path.endsWith('/callback')) {
     const code = url.searchParams.get('code')
     const state = url.searchParams.get('state')
-    const cookies = {}
     const cookieStr = request.headers.get('Cookie') || ''
-    cookieStr.split(';').forEach(function(c) {
-      const eq = c.indexOf('=')
-      if (eq !== -1) cookies[c.substring(0, eq).trim()] = c.substring(eq + 1).trim()
-    })
 
-    if (!code || !state || cookies.oauth_state !== state) {
-      return new Response('Invalid request', { status: 400 })
+    // Build a debug page to see what's happening
+    const debug = 'code=' + (code || 'missing') + '\nstate=' + (state || 'missing') + '\ncookie=' + cookieStr
+
+    // If code is missing, show debug
+    if (!code) {
+      return new Response('Missing code\n\n' + debug, {
+        headers: { 'content-type': 'text/plain' }
+      })
     }
 
+    // Exchange code for access token
     const tokenRes = await fetch('https://github.com/login/oauth/access_token', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -50,19 +52,24 @@ export async function onRequest(context) {
     })
 
     const tokenData = await tokenRes.json()
+
     if (tokenData.error) {
-      return new Response('OAuth error: ' + (tokenData.error_description || tokenData.error),
-        { status: 400 })
+      return new Response('Token error: ' + JSON.stringify(tokenData), {
+        headers: { 'content-type': 'text/plain' }
+      })
+    }
+
+    if (!tokenData.access_token) {
+      return new Response('No access token: ' + JSON.stringify(tokenData), {
+        headers: { 'content-type': 'text/plain' }
+      })
     }
 
     const accessToken = tokenData.access_token
     const html = '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Redirecting...</title></head><body><script>(function(){var token=' + JSON.stringify(accessToken) + ';window.opener.postMessage({token:token},"*");window.close()})();</script></body></html>'
 
     return new Response(html, {
-      headers: {
-        'Content-Type': 'text/html; charset=utf-8',
-        'Set-Cookie': 'oauth_state=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0; Secure',
-      },
+      headers: { 'Content-Type': 'text/html; charset=utf-8' },
     })
   }
 
