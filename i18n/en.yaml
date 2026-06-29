@@ -12,13 +12,13 @@ subscribe_hero_title: "Guides, case studies, and performance marketing tips."
 subscribe_hero_desc: "Proven strategies to increase ROAS from the Analisia team. Weekly newsletter, straight to your inbox."
 
 # Homepage
-featured_title: "Editor's Pick"
-see_all: "See all"
+featured_title: "Featured"
+see_all: "View all posts"
 filter_all: "All"
 
 # Post
-read_next: "Read Next"
-table_of_contents: "Table of Contents"
+read_next: "Read next in"
+table_of_contents: "On this page"
 published: "Published"
 reading_time: "min read"
 min_read: "m"
@@ -27,38 +27,57 @@ categories: "Categories"
 tags: "Tags"
 
 # Footer
-footer_description: "A performance marketing blog by Analisia. Published bilingually, ID and EN."
-footer_konten: "Content"
+footer_description: "Performance marketing, decoded weekly. Tactics from the team running paid media for fast-growing brands."
+footer_explore: "Explore"
 footer_newsletter: "Newsletter"
 footer_berlangganan: "Subscribe"
-footer_arsip_digest: "Digest archive"
-footer_bahasa: "Language"
-footer_copyright: "© 2026 Analisia. blog.analisia.id"
+footer_arsip_digest: "Past issues"
+footer_rss: "RSS feed"
+footer_copyright: "© 2026 Analisia. All rights reserved."
 
 # Subscribe page
-subscribe_page_title: "One email a week. Zero fluff."
-subscribe_page_desc: "Guides, case studies, and performance marketing tips you can apply immediately — curated by the Analisia team every Thursday morning."
-subscribe_benefit_1: "Real case studies with actual ROAS and CPA numbers"
-subscribe_benefit_2: "Google Ads & Meta Ads tactics tested on client accounts"
-subscribe_benefit_3: "No spam. Unsubscribe anytime in one click"
-subscribe_social_proof: "Read by 3,200+ marketers every week"
-subscribe_name_label: "Name"
+subscribe_page_title: "Sharper campaigns, one Tuesday at a time."
+subscribe_page_desc: "Join 12,400 marketers who get our best tactical breakdowns delivered every week — free, and no fluff."
+subscribe_benefit_1: "One tactical breakdown each week — bidding, creative, or analytics."
+subscribe_benefit_2: "Real campaign data and benchmarks you can act on Monday."
+subscribe_benefit_3: "Early access to our teardowns and template drops."
+subscribe_benefit_4: "Zero spam. One email, every Tuesday morning."
+subscribe_social_proof: "Join 12,400 marketers · One email every Tuesday · No spam"
+subscribe_name_label: "First name"
 subscribe_name_placeholder: "Your name"
-subscribe_email_label: "Email"
-subscribe_email_placeholder: "name@email.com"
-subscribe_button_text: "Subscribe now"
-subscribe_cta_headline: "Get tactics like this every week"
-subscribe_cta_desc: "Weekly performance marketing digest, straight to your inbox."
-subscribe_note: "Single opt-in · immediate activation · protected by Turnstile"
+subscribe_email_label: "Email address"
+subscribe_email_placeholder: "you@company.com"
+subscribe_button_text: "Get the weekly digest"
+subscribe_cta_headline: "Get the weekly performance digest"
+subscribe_cta_desc: "One email every Tuesday. Tactical breakdowns like this one — no fluff. Join 12,400 marketers."
+subscribe_note: "Single opt-in. Unsubscribe anytime. We never share your email."
 
 # Subscribe success
-subscribe_success_title: "Thanks!"
-subscribe_success_body: "Check your inbox — we just sent a welcome email. Your first weekly digest arrives Thursday morning."
+subscribe_success_title: "Thanks! Check your inbox to confirm."
+subscribe_success_body: "Your first weekly digest arrives Tuesday morning."
 subscribe_success_fallback: "Didn't receive an email? Check your spam folder or sign up again."
 
+# Subscribe error
+subscribe_invalid_email: "Please enter a valid email address."
+subscribe_network_error_title: "Couldn't complete your subscription"
+subscribe_network_error_body: "We couldn't reach the server. Check your connection and try again."
+
+# Subscribe inline CTA
+subscribe_cta_eyebrow: "The Analisia Blog"
+subscribe_hero_heading: "Performance marketing, decoded every week."
+subscribe_hero_social: "Join 12,400 marketers · One email every Tuesday · No spam"
+subscribe_inline_headline: "Get the weekly performance digest"
+subscribe_inline_desc: "One email every Tuesday. Tactical breakdowns like this one — no fluff. Join 12,400 marketers."
+
 # About
-about_title: "We write about what actually moves the numbers."
-about_desc: "Analisia Blog is an open journal from Analisia performance marketing agency — where we share frameworks, experiments, and lessons from managing client ad spend every day."
+about_badge: "About Analisia"
+about_heading: "We write the playbook we wish we had."
+about_desc: "Analisia is a performance marketing agency. This blog is where our team publishes the tactics, experiments, and hard-won lessons from running paid media for fast-growing brands."
+about_why_title: "Why we publish"
+about_team_title: "The team behind it"
+
+# Category pages
+category_article_count: "articles in"
 
 # Common
 read_more: "Read more"

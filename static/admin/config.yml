@@ -1,49 +1,43 @@
 backend:
   name: github
-  repo: analisia/analisia-blog
+  repo: analisiaid/analisiablog
   branch: main
-  base_url: https://analisia-blog-oauth.analisia.workers.dev
+  base_url: https://analisia-blog-oauth.dimaskurniantoroaji.workers.dev
   auth_endpoint: api/oauth/auth
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
-
-i18n:
-  structure: multiple_folders
-  locales: [id, en]
-  default_locale: id
 
 collections:
   - name: "posts"
     label: "Blog Posts"
     label_singular: "Post"
     folder: "content/posts"
-    i18n: true
     create: true
     slug: "{{slug}}"
     preview_path: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string", i18n: true}
-      - {label: "Slug", name: "slug", widget: "string", i18n: duplicate, hint: "URL path segment. Use lowercase with hyphens."}
-      - {label: "Description", name: "description", widget: "string", i18n: true, hint: "SEO meta description, max 155 characters"}
-      - {label: "Body", name: "body", widget: "markdown", i18n: true}
-      - {label: "Tags", name: "tags", widget: "list", i18n: true, required: false}
-      - {label: "Categories", name: "categories", widget: "list", i18n: duplicate, required: false}
-      - {label: "Author", name: "author", widget: "string", i18n: duplicate, required: false}
-      - {label: "Publish Date", name: "date", widget: "datetime", i18n: duplicate}
-      - {label: "Cover Image", name: "cover", widget: "image", i18n: duplicate, required: false}
-      - {label: "Featured", name: "featured", widget: "boolean", i18n: duplicate, default: false, required: false}
-      - {label: "Show TOC", name: "toc", widget: "boolean", i18n: duplicate, default: true, required: false}
-      - {label: "Translation Key", name: "translationKey", widget: "string", i18n: duplicate, hint: "Must match between ID and EN versions"}
-      - {label: "Reading Time", name: "readingTime", widget: "boolean", i18n: duplicate, default: true, required: false}
-      - {label: "Draft", name: "draft", widget: "boolean", i18n: duplicate, default: false, required: false}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string", hint: "URL path segment. Use lowercase with hyphens."}
+      - {label: "Description", name: "description", widget: "string", hint: "SEO meta description, max 155 characters"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Categories", name: "categories", widget: "list", required: false}
+      - {label: "Author", name: "author", widget: "string", required: false}
+      - {label: "Author Title", name: "author_title", widget: "string", required: false, hint: "e.g. Head of Paid Media"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Cover Image", name: "cover", widget: "image", required: false}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false, required: false}
+      - {label: "Show TOC", name: "toc", widget: "boolean", default: true, required: false}
+      - {label: "Reading Time", name: "readingTime", widget: "boolean", default: true, required: false}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false, required: false}
 
   - name: "pages"
     label: "Pages"
     folder: "content"
-    i18n: true
     create: false
     fields:
-      - {label: "Title", name: "title", widget: "string", i18n: true}
-      - {label: "Description", name: "description", widget: "string", i18n: true}
-      - {label: "Body", name: "body", widget: "markdown", i18n: true}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Type", name: "type", widget: "string", hint: "Use 'about' or 'subscribe' to apply custom layout"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}

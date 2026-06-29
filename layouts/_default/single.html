@@ -3,7 +3,7 @@
   {{/* Post header */}}
   <header class="post-header">
     <div class="post-breadcrumb">
-      <span class="post-breadcrumb-item">{{ .Site.Title }}</span>
+      <span class="post-breadcrumb-item">Blog</span>
       <svg class="post-breadcrumb-chevron" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="9 18 15 12 9 6"></polyline>
       </svg>
@@ -21,13 +21,23 @@
 
     <div class="post-meta">
       <div class="post-meta-author">
-        {{ if .Params.author_avatar }}
-        <div class="post-meta-avatar" style="background-image: url('{{ .Params.author_avatar | absURL }}');"></div>
-        {{ end }}
-        <span class="post-meta-name">{{ with .Params.author }}{{ . }}{{ end }}</span>
+        <div class="post-meta-avatar">
+          {{ $author := .Params.author }}
+          {{ if $author }}
+          {{ $initials := "" }}
+          {{ range split $author " " }}
+          {{ $initials = print $initials (substr . 0 1) }}
+          {{ end }}
+          <span class="post-meta-avatar-text">{{ upper (substr $initials 0 2) }}</span>
+          {{ end }}
+        </div>
+        <div class="post-meta-author-info">
+          <span class="post-meta-name">{{ with .Params.author }}{{ . }}{{ end }}</span>
+          <span class="post-meta-title">{{ with .Params.author_title }}{{ . }}{{ end }}</span>
+        </div>
       </div>
+      <div class="post-meta-divider"></div>
       {{ if .Date }}
-      <div class="post-meta-sep"></div>
       <div class="post-meta-date">
         <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -35,7 +45,7 @@
           <line x1="8" y1="2" x2="8" y2="6"></line>
           <line x1="3" y1="10" x2="21" y2="10"></line>
         </svg>
-        <span>{{ .Date.Format "2 Jan 2006" }}</span>
+        <span>{{ .Date.Format "Jan 2, 2006" }}</span>
       </div>
       {{ end }}
       {{ if .ReadingTime }}
@@ -44,16 +54,11 @@
           <circle cx="12" cy="12" r="10"></circle>
           <polyline points="12 6 12 12 16 14"></polyline>
         </svg>
-        <span>{{ .ReadingTime }} {{ i18n "reading_time" }}</span>
+        <span>{{ .ReadingTime }} {{ i18n "minute_read" }}</span>
       </div>
       {{ end }}
     </div>
   </header>
-
-  {{/* Cover image */}}
-  {{ with .Params.cover }}
-  <div class="post-cover" style="background-image: url('{{ . | absURL }}');"></div>
-  {{ end }}
 
   {{/* Content + TOC */}}
   <div class="post-content-wrapper">
@@ -63,6 +68,30 @@
       <div class="post-toc-title">{{ i18n "table_of_contents" }}</div>
       <div class="post-toc-list">
         {{ .TableOfContents }}
+      </div>
+      {{/* Share section */}}
+      <div class="post-share">
+        <div class="post-share-title">Share</div>
+        <div class="post-share-buttons">
+          <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" rel="noopener" class="post-share-btn" aria-label="Share on Twitter">
+            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" rel="noopener" class="post-share-btn" aria-label="Share on LinkedIn">
+            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <button class="post-share-btn" onclick="navigator.clipboard.writeText('{{ .Permalink }}');this.querySelector('svg').style.color='var(--brand-accent)'" aria-label="Copy link">
+            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+          </button>
+        </div>
       </div>
     </aside>
     {{ end }}
@@ -82,21 +111,30 @@
     </div>
     {{ end }}
 
-    {{/* Post body */}}
-    <article class="post-body">
-      {{ .Content }}
+    {{/* Right column: Cover + Body */}}
+    <article class="post-body-column">
+      {{/* Cover image — inside the post body column */}}
+      {{ with .Params.cover }}
+      <div class="post-cover" style="background-image: url('{{ . | absURL }}');"></div>
+      {{ end }}
 
-      {{/* Inline subscribe CTA */}}
-      {{ partial "subscribe-cta" . }}
+      <div class="post-body">
+        {{ .Content }}
+
+        {{/* Inline subscribe CTA */}}
+        {{ partial "subscribe-cta" . }}
+      </div>
     </article>
   </div>
 
-  {{/* Read Next */}}
+  {{/* Read Next — same category posts */}}
+  {{ $currentCategory := index .Params.categories 0 }}
   {{ $related := where (where .Site.RegularPages "Section" "posts") "Permalink" "ne" .Permalink }}
-  {{ $related := $related | first 3 }}
+  {{ $sameCat := where $related "Params.categories" "intersect" (slice $currentCategory) }}
+  {{ $related := $sameCat | first 2 }}
   {{ if $related }}
   <section class="read-next">
-    <h2 class="read-next-heading">{{ i18n "read_next" }}</h2>
+    <h2 class="read-next-heading">{{ i18n "read_next" }} {{ $currentCategory }}</h2>
     <div class="read-next-grid">
       {{ range $related }}
       <a href="{{ .RelPermalink }}" class="read-next-card">
@@ -106,6 +144,10 @@
         <span class="read-next-card-title">{{ .Title }}</span>
         <span class="read-next-card-meta">
           {{ if .ReadingTime }}{{ .ReadingTime }} {{ i18n "minute_read" }}{{ end }}
+          <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
         </span>
       </a>
       {{ end }}

@@ -1,8 +1,16 @@
 <div class="subscribe-cta-block">
-  <h3 class="subscribe-cta-heading">{{ i18n "subscribe_cta_headline" | default "Dapatkan taktik seperti ini tiap minggu" }}</h3>
-  <p class="subscribe-cta-desc">{{ i18n "subscribe_cta_desc" | default "Digest mingguan performance marketing, langsung ke inbox kamu." }}</p>
-  <form class="subscribe-cta-form" action="{{ relLangURL "berlangganan" }}" method="get">
-    <input type="email" class="subscribe-cta-input" placeholder="{{ i18n "subscribe_placeholder" }}" name="email" required>
-    <button type="submit" class="subscribe-cta-button">{{ i18n "subscribe_button" }}</button>
+  <div class="subscribe-cta-content">
+    <h3 class="subscribe-cta-heading">{{ i18n "subscribe_inline_headline" }}</h3>
+    <p class="subscribe-cta-desc">{{ i18n "subscribe_inline_desc" }}</p>
+  </div>
+  <form class="subscribe-cta-form">
+    <input type="email" class="subscribe-cta-input" placeholder="{{ i18n "subscribe_email_placeholder" }}" required>
+    <button type="submit" class="subscribe-cta-button">
+      <span>{{ i18n "subscribe_button" }}</span>
+      <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </button>
   </form>
 </div>

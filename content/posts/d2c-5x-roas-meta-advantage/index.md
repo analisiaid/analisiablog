@@ -1,24 +1,24 @@
 ---
-title: "Bagaimana brand D2C scale ke 5x ROAS lewat Meta Advantage+"
+title: "How a D2C Brand Scaled to 5x ROAS with Meta Advantage+"
 slug: "d2c-5x-roas-meta-advantage"
-description: "Studi kasus optimasi Meta Ads untuk brand D2C yang mencapai 5x ROAS dalam 90 hari."
+description: "A case study on Meta Ads optimization for a D2C brand achieving 5x ROAS in 90 days."
 date: 2026-06-24T10:00:00+07:00
 author: "Maya Sari"
-categories: ["Studi Kasus"]
+author_title: "Performance Marketing Manager"
+categories: ["Case Studies"]
 tags: ["meta ads", "d2c", "roas"]
 featured: true
 draft: false
 readingTime: true
 toc: true
-translationKey: "d2c-5x-roas-meta-advantage"
 ---
 
-Dalam studi kasus ini, kami membahas bagaimana brand D2C mencapai 5x ROAS melalui Meta Advantage+ campaigns dalam 90 hari.
+In this case study, we break down how a D2C brand achieved 5x ROAS through Meta Advantage+ campaigns in 90 days.
 
-## Strategi awal
+## Initial strategy
 
-Brand ini datang dengan ROAS 1.8x dan budget yang tersebar di terlalu banyak campaign. Langkah pertama kami adalah konsolidasi.
+This brand came in with 1.8x ROAS and budget scattered across too many campaigns. Our first step was consolidation.
 
-## Hasil
+## Results
 
-Setelah 90 hari, ROAS naik ke 5.2x dengan CPA turun 35%.
+After 90 days, ROAS climbed to 5.2x with CPA down 35%.

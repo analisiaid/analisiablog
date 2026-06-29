@@ -1,21 +1,21 @@
 <article class="featured-card">
-  {{ with .Params.cover }}
-  <div class="featured-card-cover" style="background-image: url('{{ . | absURL }}');"></div>
-  {{ end }}
-  <div class="featured-card-body">
-    {{ with .Params.categories }}
-    {{ range first 1 . }}
-    <span class="featured-card-category">{{ . }}</span>
+  <a href="{{ .RelPermalink }}" class="featured-card-link">
+    {{ with .Params.cover }}
+    <div class="featured-card-cover" style="background-image: url('{{ . | absURL }}');"></div>
     {{ end }}
-    {{ end }}
-    <h2 class="featured-card-title">
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    </h2>
-    <p class="featured-card-meta">
-      {{ with .Params.author }}{{ . }}{{ end }}
-      {{ if and .Params.author .Date }} · {{ end }}
-      {{ with .Date }}{{ .Format "2 Jan 2006" }}{{ end }}
-      {{ if .ReadingTime }} · {{ .ReadingTime }} {{ i18n "minute_read" }}{{ end }}
-    </p>
-  </div>
+    <div class="featured-card-body">
+      {{ with .Params.categories }}
+      {{ range first 1 . }}
+      <span class="featured-card-category">{{ . }}</span>
+      {{ end }}
+      {{ end }}
+      <h2 class="featured-card-title">{{ .Title }}</h2>
+      <p class="featured-card-desc">{{ .Params.description }}</p>
+      <div class="featured-card-meta">
+        <span class="featured-card-author">{{ with .Params.author }}{{ . }}{{ end }}</span>
+        <span class="featured-card-meta-sep">·</span>
+        <span class="featured-card-reading">{{ .ReadingTime }} {{ i18n "minute_read" }}</span>
+      </div>
+    </div>
+  </a>
 </article>

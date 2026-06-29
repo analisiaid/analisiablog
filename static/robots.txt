@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://blog.analisia.id/sitemap.xml
-Sitemap: https://blog.analisia.id/en/sitemap.xml

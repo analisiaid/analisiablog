@@ -1,11 +1,15 @@
 {{ define "main" }}
 <div class="page-wrapper">
+
+{{ if .IsHome }}
+  {{/* === HOMEPAGE === */}}
   {{/* Hero */}}
   <section class="hero">
-    <h1 class="hero-heading">{{ .Site.Params.subtitle }}</h1>
+    <div class="hero-eyebrow">{{ i18n "subscribe_cta_eyebrow" }}</div>
+    <h1 class="hero-heading">{{ i18n "subscribe_hero_heading" }}</h1>
     <p class="hero-subtitle">{{ i18n "subscribe_hero_desc" }}</p>
-    <form class="hero-form" action="{{ relLangURL "berlangganan" }}" method="get">
-      <input type="email" class="hero-form-input" placeholder="{{ i18n "subscribe_placeholder" }}" name="email" required>
+    <form class="hero-form" id="hero-subscribe-form">
+      <input type="email" class="hero-form-input" placeholder="{{ i18n "subscribe_email_placeholder" }}" name="email" required>
       <button type="submit" class="hero-form-button">
         <span>{{ i18n "subscribe_button" }}</span>
         <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
@@ -14,38 +18,129 @@
         </svg>
       </button>
     </form>
+    <p class="hero-social-proof">{{ i18n "subscribe_hero_social" }}</p>
   </section>
 
-  {{ $locale := .Language.Lang }}
-  {{ $allPages := where .Site.RegularPages "Section" "posts" }}
-  {{ $localPages := where $allPages "Language.Lang" $locale }}
+  {{ $pages := where .Site.RegularPages "Section" "posts" }}
 
   {{/* Featured Posts */}}
-  {{ $featured := where $localPages "Params.featured" true }}
+  {{ $featured := where $pages "Params.featured" true }}
   {{ if $featured }}
   <section class="featured-section">
     <div class="featured-header">
-      <span class="featured-title">{{ i18n "featured_title" }}</span>
-      {{ if gt (len $featured) 1 }}
-      <a href="#" class="featured-see-all">{{ i18n "see_all" }}</a>
+      <h2 class="featured-title">{{ i18n "featured_title" }}</h2>
+      <span class="featured-see-all">{{ i18n "see_all" }}</span>
+    </div>
+    <div class="featured-list">
+      {{ range $featured }}
+        {{ partial "featured-posts" . }}
       {{ end }}
     </div>
-    {{ range $featured }}
-      {{ partial "featured-posts" . }}
-    {{ end }}
   </section>
   {{ end }}
+
+  {{ $paginator := .Paginate $pages.ByDate.Reverse 10 }}
 
   {{/* Post List */}}
   <section class="post-list">
     <div class="post-filter">
       <span class="post-filter-tab active">{{ i18n "filter_all" }}</span>
+      <a href="{{ "/categories/guides/" | relURL }}" class="post-filter-tab">Guides</a>
+      <a href="{{ "/categories/analytics/" | relURL }}" class="post-filter-tab">Analytics</a>
+      <a href="{{ "/categories/strategy/" | relURL }}" class="post-filter-tab">Strategy</a>
+      <a href="{{ "/categories/creative/" | relURL }}" class="post-filter-tab">Creative</a>
     </div>
     <div class="post-rows">
-      {{ range $localPages.ByDate.Reverse }}
+      {{ range $paginator.Pages }}
         {{ partial "post-card" . }}
       {{ end }}
     </div>
+
+    {{/* Pagination */}}
+    {{ if gt $paginator.TotalPages 1 }}
+    <div class="pagination">
+      {{ if $paginator.HasPrev }}
+      <a href="{{ $paginator.Prev.URL }}" class="pagination-arrow">
+        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </a>
+      {{ end }}
+      {{ range $paginator.Pagers }}
+      <a href="{{ .URL }}" class="pagination-page{{ if eq .PageNumber $paginator.PageNumber }} active{{ end }}">{{ .PageNumber }}</a>
+      {{ end }}
+      {{ if $paginator.HasNext }}
+      <a href="{{ $paginator.Next.URL }}" class="pagination-next">
+        <span>Next</span>
+        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+      {{ end }}
+    </div>
+    {{ end }}
   </section>
+
+{{ else if .Data.Term }}
+  {{/* === CATEGORY PAGE === */}}
+  {{ $categoryTitle := .Data.Term | title }}
+  <section class="category-hero">
+    <div class="category-hero-badge">Blog / {{ $categoryTitle }}</div>
+    <h1 class="category-hero-heading">{{ $categoryTitle }}</h1>
+    <p class="category-hero-desc">
+      {{ with .Description }}{{ . }}{{ else }}
+        {{ if eq $categoryTitle "Guides" }}Step-by-step playbooks for lowering CPA, scaling spend, and structuring campaigns that actually convert — from the team running paid media for fast-growing brands.
+        {{ else if eq $categoryTitle "Analytics" }}Measurement frameworks, attribution insights, and data-driven decision-making for performance marketers.
+        {{ else if eq $categoryTitle "Strategy" }}High-level approaches to campaign planning, budget allocation, and growth scaling.
+        {{ else if eq $categoryTitle "Creative" }}Ad creative testing methodologies, hook structures, and production workflows that drive results.
+        {{ else if eq $categoryTitle "Case Studies" }}Real client results with transparent numbers — what worked, what didn't, and why.
+        {{ end }}
+      {{ end }}
+    </p>
+    <p class="category-hero-count">{{ len .Pages }} {{ i18n "category_article_count" }} {{ $categoryTitle }}</p>
+  </section>
+
+  {{ $paginator := .Paginate .Pages.ByDate.Reverse 10 }}
+
+  <section class="post-list">
+    <div class="post-filter">
+      <a href="{{ "/" | relURL }}" class="post-filter-tab">{{ i18n "filter_all" }}</a>
+      <span class="post-filter-tab active">{{ $categoryTitle }}</span>
+    </div>
+    <div class="post-rows">
+      {{ range $paginator.Pages }}
+        {{ partial "post-card" . }}
+      {{ end }}
+    </div>
+
+    {{ if gt $paginator.TotalPages 1 }}
+    <div class="pagination">
+      {{ if $paginator.HasPrev }}
+      <a href="{{ $paginator.Prev.URL }}" class="pagination-arrow">
+        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </a>
+      {{ end }}
+      {{ range $paginator.Pagers }}
+      <a href="{{ .URL }}" class="pagination-page{{ if eq .PageNumber $paginator.PageNumber }} active{{ end }}">{{ .PageNumber }}</a>
+      {{ end }}
+      {{ if $paginator.HasNext }}
+      <a href="{{ $paginator.Next.URL }}" class="pagination-next">
+        <span>Next</span>
+        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </section>
+{{ end }}
+
 </div>
 {{ end }}

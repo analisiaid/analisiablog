@@ -1,33 +1,33 @@
 ---
-title: "Cara menurunkan CPA Google Ads hingga 40% dalam 90 hari"
-slug: "cara-menurunkan-cpa-google-ads"
-description: "Framework audit dan optimasi bidding yang kami pakai di belasan akun e-commerce untuk menekan biaya akuisisi tanpa mengorbankan volume."
+title: "How to Lower Google Ads CPA by 40% in 90 Days"
+slug: "lower-google-ads-cpa"
+description: "The audit and bidding optimization framework we use across a dozen e-commerce accounts to reduce acquisition costs without sacrificing volume."
 date: 2026-06-28T10:00:00+07:00
 author: "Rizky Pratama"
-categories: ["Panduan"]
+author_title: "Paid Media Lead"
+categories: ["Guides"]
 tags: ["google ads", "cpa", "bidding"]
 cover: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
 featured: true
 draft: false
 readingTime: true
 toc: true
-translationKey: "cara-menurunkan-cpa-google-ads"
 ---
 
-Biaya per akuisisi jarang melonjak dalam semalam. Ia merayap — sedikit demi sedikit — saat struktur campaign membusuk, search term melebar, dan bidding dibiarkan autopilot tanpa rambu yang jelas. Artikel ini memecah proses 90 hari yang kami pakai untuk membalik tren itu.
+Cost per acquisition rarely spikes overnight. It creeps — little by little — as campaign structure decays, search terms broaden, and bidding runs on autopilot without clear guardrails. This article breaks down the 90-day process we use to reverse that trend.
 
-## Audit struktur campaign
+## Audit campaign structure
 
-Mulai dari peta akun. Pisahkan brand dan non-brand, kelompokkan produk berdasarkan margin, dan pastikan setiap ad group punya intent yang seragam. Akun yang rapi membuat sinyal konversi lebih bersih — dan Smart Bidding hanya sebaik data yang kamu berikan padanya.
+Start with the account map. Separate brand and non-brand, group products by margin, and ensure every ad group has uniform intent. A clean account produces cleaner conversion signals — and Smart Bidding is only as good as the data you feed it.
 
-> "CPA yang tinggi hampir selalu gejala dari struktur yang berantakan, bukan bidding yang salah."
+> "High CPA is almost always a symptom of broken structure, not wrong bidding."
 
-Setelah struktur beres, jalankan negative keyword sprint selama dua minggu. Tinjau search term report harian dan potong kueri yang tidak relevan. Di salah satu akun, langkah ini saja memangkas 22% pengeluaran sia-sia sebelum kami menyentuh bidding sama sekali.
+Once structure is clean, run a two-week negative keyword sprint. Review the search term report daily and cut irrelevant queries. On one account, this step alone eliminated 22% of wasted spend before we touched bidding at all.
 
-## Strategi bidding 90 hari
+## The 90-day bidding strategy
 
-Baru di fase ini kami mengubah strategi bidding. Mulai dari Maximize Conversions dengan batas tCPA longgar, kumpulkan minimal 30 konversi per kampanye, lalu kencangkan target secara bertahap setiap 7–10 hari. Kesabaran di awal mencegah algoritma over-correcting.
+Only in this phase do we change bidding strategy. Start with Maximize Conversions at a loose tCPA cap, collect at least 30 conversions per campaign, then tighten targets gradually every 7–10 days. Patience early prevents the algorithm from over-correcting.
 
-## Mengukur dampak ke profit
+## Measuring impact on profit
 
-CPA turun tidak selalu berarti profit naik. Lacak juga AOV dan margin produk di setiap kampanye. Kami selalu membuat dashboard yang menghubungkan CPA dengan profit per pelanggan — bukan sekadar biaya per akuisisi.
+A lower CPA doesn't always mean higher profit. Track AOV and product margin per campaign. We always build a dashboard that connects CPA to profit per customer — not just acquisition cost.
