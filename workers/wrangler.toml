@@ -2,18 +2,12 @@
 # Deploy from workers/ directory:
 #   cd workers
 #   npx wrangler deploy github-oauth-worker.js --name analisia-blog-oauth
-# Then set secrets:
-#   npx wrangler secret put GITHUB_CLIENT_ID
-#   npx wrangler secret put GITHUB_CLIENT_SECRET
 # URL: https://analisia-blog-oauth.analisia-id.workers.dev
 
 name = "analisia-blog-oauth"
 main = "github-oauth-worker.js"
 compatibility_date = "2026-06-01"
 
-# First create the KV namespace:
-#   npx wrangler kv namespace create ANALISIA_OAUTH
-# Then paste the returned ID below:
 [[kv_namespaces]]
 binding = "ANALISIA_OAUTH"
-id = ""  # <-- REPLACE with your KV namespace ID
+id = "62c8c8d5a17c4d199234cdfd79514393"
