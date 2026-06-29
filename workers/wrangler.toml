@@ -1,12 +1,19 @@
 # GitHub OAuth Worker — for Decap CMS login
-# Deploy: npx wrangler deploy github-oauth-worker.js --name analisia-blog-oauth
-# URL: https://analisia-blog-oauth.<your-subdomain>.workers.dev
+# Deploy from workers/ directory:
+#   cd workers
+#   npx wrangler deploy github-oauth-worker.js --name analisia-blog-oauth
+# Then set secrets:
+#   npx wrangler secret put GITHUB_CLIENT_ID
+#   npx wrangler secret put GITHUB_CLIENT_SECRET
+# URL: https://analisia-blog-oauth.analisia-id.workers.dev
 
 name = "analisia-blog-oauth"
 main = "github-oauth-worker.js"
 compatibility_date = "2026-06-01"
 
-# KV namespace for OAuth state
+# First create the KV namespace:
+#   npx wrangler kv namespace create ANALISIA_OAUTH
+# Then paste the returned ID below:
 [[kv_namespaces]]
 binding = "ANALISIA_OAUTH"
-id = "cbc233ed549c4f1da02ec2dcb61f674f"
+id = ""  # <-- REPLACE with your KV namespace ID
