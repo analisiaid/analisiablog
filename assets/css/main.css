@@ -1732,6 +1732,10 @@ img {
   .post-content-wrapper {
     gap: 0;
   }
+  .post-header {
+    max-width: 680px;
+    padding: 32px 20px 24px;
+  }
   .subscribe-page-layout {
     flex-direction: column;
     gap: 40px;
@@ -1870,8 +1874,17 @@ img {
   .post-body h2 {
     font-size: 24px;
   }
+  .post-body h3 {
+    font-size: 19px;
+  }
   .post-body p {
     font-size: 17px;
+  }
+  .post-body blockquote p {
+    font-size: 19px;
+  }
+  .post-body pre {
+    padding: 16px 20px;
   }
 
   /* Subscribe CTA (mobile) */
