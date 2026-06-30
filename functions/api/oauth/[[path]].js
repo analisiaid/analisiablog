@@ -4,6 +4,17 @@ export async function onRequest(context) {
   const url = new URL(request.url)
   const path = url.pathname
 
+  // Debug
+  if (path.endsWith('/debug')) {
+    return new Response(
+      'GITHUB_CLIENT_ID=' + (env.GITHUB_CLIENT_ID || 'NOT SET') + '\n' +
+      'GITHUB_CLIENT_SECRET=' + (env.GITHUB_CLIENT_SECRET ? 'SET (len=' + env.GITHUB_CLIENT_SECRET.length + ')' : 'NOT SET') + '\n' +
+      'origin=' + url.origin + '\n' +
+      'path=' + path,
+      { headers: { 'content-type': 'text/plain' } }
+    )
+  }
+
   // --- /api/oauth/auth: redirect to GitHub ---
   if (path.endsWith('/auth')) {
     const redirectUri = url.origin + '/api/oauth/callback'
@@ -58,5 +69,5 @@ export async function onRequest(context) {
     })
   }
 
-  return new Response('Not found', { status: 404 })
+  return new Response('Not found. Try /auth, /callback, or /debug', { status: 404 })
 }
