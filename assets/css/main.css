@@ -1862,6 +1862,10 @@ img {
   .post-header {
     padding: 32px 20px 24px 20px;
   }
+  .mobile-toc {
+    padding: 0 20px;
+    border: none;
+  }
   .post-title {
     font-size: 30px;
     letter-spacing: -0.75px;
