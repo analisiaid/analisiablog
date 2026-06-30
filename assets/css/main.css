@@ -1005,7 +1005,7 @@ img {
 
 .subscribe-cta-input {
   flex: 1;
-  height: 80px;
+  height: 46px;
   display: flex;
   align-items: center;
   background: #ffffff;
@@ -1024,7 +1024,7 @@ img {
 
 .subscribe-cta-button {
   display: flex;
-  height: 80px;
+  height: 46px;
   flex-shrink: 0;
   align-items: center;
   gap: 8px;
