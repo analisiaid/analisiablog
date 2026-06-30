@@ -4,8 +4,6 @@
 // Validates input, adds contact to Resend audience, sends welcome email
 
 const RESEND_API_KEY='YOUR_R..._KEY'
-const RESEND_AUDIENCE_ID = 'YOUR_RESEND_AUDIENCE_ID'
-const ALLOWED_ORIGINS = ['https://blog.analisia.id', 'http://localhost:1313']
 export async function onRequest(context) {
   const request = context.request
   const env = context.env
@@ -54,30 +52,9 @@ export async function onRequest(context) {
     }
   }
 
-  // Add contact to Resend audience
-  const apiKey = env.RESEND_API_KEY || RESEND_API_KEY
-  const audienceId = env.RESEND_AUDIENCE_ID || RESEND_AUDIENCE_ID
-
-  const createContactRes = await fetch(`https://api.resend.com/audiences/${audienceId}/contacts`, {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${apiKey}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      email: email,
-      first_name: name || '',
-      unsubscribed: false,
-    }),
-  })
-
-  if (!createContactRes.ok) {
-    const err = await createContactRes.text()
-    console.error('Resend create contact error:', err)
-  }
-
   // Send welcome email (inline HTML)
-  const welcomeHtml = '<!DOCTYPE html><html><head><meta charset="utf-8"><style>body{font-family:Inter,sans-serif;line-height:1.6;color:#111;max-width:560px;margin:0 auto;padding:32px 24px}h1{font-family:\'Plus Jakarta Sans\',sans-serif;font-size:28px;color:#111}.brand{color:#FF4C1E}.btn{display:inline-block;padding:12px 24px;background:#FF4C1E;color:#fff;border-radius:4px;text-decoration:none;font-weight:600}</style></head><body><div class="brand" style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.3px;margin-bottom:8px">Analisia Blog</div><h1>Welcome to the weekly digest.</h1><p>Thanks for subscribing' + (name ? ', ' + name : '') + '.</p><p>Every Tuesday morning, you\'ll get one tactical breakdown from our team — bidding strategies, creative tests, analytics frameworks — pulled from real client accounts.</p><p>Here\'s what to expect in your first email:</p><ul><li>A single, actionable topic — no fluff</li><li>Real numbers and benchmarks you can use Monday morning</li><li>Early access to template drops and teardowns</li></ul><p>See you Tuesday.</p><p style="color:#666;font-size:13px;margin-top:32px">Analisia Team · <a href="{{RESEND_UNSUBSCRIBE}}" style="color:#666">Unsubscribe</a></p></body></html>'
+  const apiKey = env.RESEND_API_KEY || RESEND_API_KEY
+  const welcomeHtml = '<!DOCTYPE html><html><head><meta charset="utf-8"><style>body{font-family:Inter,sans-serif;line-height:1.6;color:#111;max-width:560px;margin:0 auto;padding:32px 24px}h1{font-family:Plus Jakarta Sans,sans-serif;font-size:28px;color:#111}.brand{color:#FF4C1E}</style></head><body><div class="brand" style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.3px;margin-bottom:8px">Analisia Blog</div><h1>Welcome to the weekly digest.</h1><p>Thanks for subscribing' + (name ? ", " + name : "") + '.</p><p>Every Tuesday morning, you will get one tactical breakdown from our team — bidding strategies, creative tests, analytics frameworks — pulled from real client accounts.</p><p>See you Tuesday.</p><p style="color:#666;font-size:13px;margin-top:32px">Analisia Team</p></body></html>'
   const sendEmailRes = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
