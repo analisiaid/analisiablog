@@ -59,7 +59,7 @@ img {
   top: 0;
   left: 0;
   right: 0;
-  height: 46px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1767,7 +1767,7 @@ img {
 @media (max-width: 768px) {
   /* Nav */
   .navbar {
-    height: 46px;
+    height: 60px;
     padding: 0 20px;
   }
   .navbar-search {
