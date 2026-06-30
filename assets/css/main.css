@@ -810,9 +810,9 @@ img {
   display: none;
   border: 1px solid var(--border);
   border-radius: 4px;
+  margin: 0 20px 20px;
   overflow: hidden;
 }
-
 .mobile-toc-header {
   display: flex;
   justify-content: space-between;

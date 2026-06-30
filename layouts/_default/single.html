@@ -60,6 +60,21 @@
     </div>
   </header>
 
+  {{/* Mobile TOC accordion — outside the flex wrapper so it stacks above body on mobile */}}
+  {{ if and (ne .Params.toc false) .WordCount }}
+  <div class="mobile-toc" id="mobile-toc">
+    <div class="mobile-toc-header" onclick="document.getElementById('mobile-toc').classList.toggle('open')">
+      <span class="mobile-toc-title">{{ i18n "table_of_contents" }}</span>
+      <svg class="mobile-toc-chevron" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </div>
+    <div class="mobile-toc-body">
+      {{ .TableOfContents }}
+    </div>
+  </div>
+  {{ end }}
+
   {{/* Content + TOC */}}
   <div class="post-content-wrapper">
     {{/* TOC sidebar */}}
@@ -94,21 +109,6 @@
         </div>
       </div>
     </aside>
-    {{ end }}
-
-    {{/* Mobile TOC accordion */}}
-    {{ if and (ne .Params.toc false) .WordCount }}
-    <div class="mobile-toc" id="mobile-toc">
-      <div class="mobile-toc-header" onclick="document.getElementById('mobile-toc').classList.toggle('open')">
-        <span class="mobile-toc-title">{{ i18n "table_of_contents" }}</span>
-        <svg class="mobile-toc-chevron" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="6 9 12 15 18 9"></polyline>
-        </svg>
-      </div>
-      <div class="mobile-toc-body">
-        {{ .TableOfContents }}
-      </div>
-    </div>
     {{ end }}
 
     {{/* Right column: Cover + Body */}}
