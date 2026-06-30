@@ -3,10 +3,9 @@
 // Pages Function: POST /api/subscribe
 // Validates input, adds contact to Resend audience, sends welcome email
 
-const RESEND_API_KEY = 'YOUR_RESEND_API_KEY'
+const RESEND_API_KEY='YOUR_R..._KEY'
 const RESEND_AUDIENCE_ID = 'YOUR_RESEND_AUDIENCE_ID'
-const RESEND_WELCOME_TEMPLATE = 'welcome'
-
+const ALLOWED_ORIGINS = ['https://blog.analisia.id', 'http://localhost:1313']
 export async function onRequest(context) {
   const request = context.request
   const env = context.env
@@ -77,8 +76,8 @@ export async function onRequest(context) {
     console.error('Resend create contact error:', err)
   }
 
-  // Send welcome email
-  const welcomeTemplate = env.RESEND_WELCOME_TEMPLATE || RESEND_WELCOME_TEMPLATE
+  // Send welcome email (inline HTML)
+  const welcomeHtml = '<!DOCTYPE html><html><head><meta charset="utf-8"><style>body{font-family:Inter,sans-serif;line-height:1.6;color:#111;max-width:560px;margin:0 auto;padding:32px 24px}h1{font-family:\'Plus Jakarta Sans\',sans-serif;font-size:28px;color:#111}.brand{color:#FF4C1E}.btn{display:inline-block;padding:12px 24px;background:#FF4C1E;color:#fff;border-radius:4px;text-decoration:none;font-weight:600}</style></head><body><div class="brand" style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.3px;margin-bottom:8px">Analisia Blog</div><h1>Welcome to the weekly digest.</h1><p>Thanks for subscribing' + (name ? ', ' + name : '') + '.</p><p>Every Tuesday morning, you\'ll get one tactical breakdown from our team — bidding strategies, creative tests, analytics frameworks — pulled from real client accounts.</p><p>Here\'s what to expect in your first email:</p><ul><li>A single, actionable topic — no fluff</li><li>Real numbers and benchmarks you can use Monday morning</li><li>Early access to template drops and teardowns</li></ul><p>See you Tuesday.</p><p style="color:#666;font-size:13px;margin-top:32px">Analisia Team · <a href="{{RESEND_UNSUBSCRIBE}}" style="color:#666">Unsubscribe</a></p></body></html>'
   const sendEmailRes = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
@@ -88,7 +87,8 @@ export async function onRequest(context) {
     body: JSON.stringify({
       from: 'Analisia Blog <newsletter@blog.analisia.id>',
       to: [email],
-      template_id: welcomeTemplate,
+      subject: 'Welcome to the Analisia weekly digest',
+      html: welcomeHtml,
     }),
   })
 
