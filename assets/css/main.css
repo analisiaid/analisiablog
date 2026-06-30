@@ -1730,7 +1730,11 @@ img {
     display: block;
   }
   .post-content-wrapper {
+    max-width: 680px;
     gap: 0;
+  }
+  .post-body-column {
+    width: 100%;
   }
   .post-header {
     max-width: 680px;
