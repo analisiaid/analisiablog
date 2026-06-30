@@ -1909,9 +1909,11 @@ img {
   }
   .subscribe-cta-input {
     width: 100%;
+    height: 46px;
   }
   .subscribe-cta-button {
     width: 100%;
+    height: 46px;
   }
 
   /* Read Next */
