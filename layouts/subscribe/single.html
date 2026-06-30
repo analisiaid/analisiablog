@@ -41,7 +41,7 @@
     </div>
   </div>
 
-  <div class="subscribe-card">
+  <form class="subscribe-card">
     <h2 class="subscribe-card-heading">Subscribe for free</h2>
     <div class="subscribe-card-field">
       <label class="subscribe-card-label">{{ i18n "subscribe_name_label" }}</label>
@@ -59,10 +59,8 @@
       </svg>
     </button>
     <p class="subscribe-card-note">{{ i18n "subscribe_note" }}</p>
-  </div>
+  </form>
 </div>
-
-{{/* Success state (hidden by default) */}}
 <div class="subscribe-success-overlay" id="subscribe-success" style="display:none;">
   <div class="subscribe-success-card">
     <div class="subscribe-success-icon">

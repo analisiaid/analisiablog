@@ -24,5 +24,8 @@
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer" . }}
+
+  {{ $js := resources.Get "js/subscribe.js" | minify | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 </body>
 </html>
