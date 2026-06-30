@@ -27,17 +27,9 @@ export async function onRequest(context) {
   // --- /api/oauth/callback: exchange code for token ---
   if (path.endsWith('/callback')) {
     const code = url.searchParams.get('code')
-    const state = url.searchParams.get('state')
-    const cookieStr = request.headers.get('Cookie') || ''
 
-    // Build a debug page to see what's happening
-    const debug = 'code=' + (code || 'missing') + '\nstate=' + (state || 'missing') + '\ncookie=' + cookieStr
-
-    // If code is missing, show debug
     if (!code) {
-      return new Response('Missing code\n\n' + debug, {
-        headers: { 'content-type': 'text/plain' }
-      })
+      return new Response('Missing code', { status: 400 })
     }
 
     // Exchange code for access token
@@ -53,18 +45,11 @@ export async function onRequest(context) {
 
     const tokenData = await tokenRes.json()
 
-    if (tokenData.error) {
-      return new Response('Token error: ' + JSON.stringify(tokenData), {
-        headers: { 'content-type': 'text/plain' }
-      })
+    if (tokenData.error || !tokenData.access_token) {
+      return new Response('OAuth error: ' + JSON.stringify(tokenData), { status: 400 })
     }
 
-    if (!tokenData.access_token) {
-      return new Response('No access token: ' + JSON.stringify(tokenData), {
-        headers: { 'content-type': 'text/plain' }
-      })
-    }
-
+    // Return HTML that posts the token to Decap CMS via postMessage and closes the window
     const accessToken = tokenData.access_token
     const html = '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Redirecting...</title></head><body><script>(function(){var token=' + JSON.stringify(accessToken) + ';window.opener.postMessage({token:token},"*");window.close()})();</script></body></html>'
 
