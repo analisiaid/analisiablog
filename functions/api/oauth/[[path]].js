@@ -54,7 +54,7 @@ export async function onRequest(context) {
     }
 
     const token = tokenData.access_token
-    const redirectUrl = url.origin + '/admin/auth-callback.html#access_token=' +
+    const redirectUrl = url.origin + '/admin/auth-callback#access_token=' +
       encodeURIComponent(token) + '&provider=github'
 
     // 302 redirect — no inline JS needed. The static auth-callback.html
