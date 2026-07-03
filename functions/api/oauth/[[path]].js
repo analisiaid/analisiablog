@@ -61,40 +61,46 @@ export async function onRequest(context) {
     //   2. Opener replies "authorizing:github"  →  popup
     //   3. Popup posts "authorization:github:success:{json}"  →  opener
     //
-    // If window.opener is null (same-window / no popup), fall back to localStorage + redirect.
+    // If window.opener is null, fall back to redirecting to admin with hash token.
     const provider = 'github'
     const successPayload = JSON.stringify({ token, provider })
+    const adminUrl = url.origin + '/admin/'
 
     const html =
       '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Logged in!</title></head><body>' +
-      '<p id="msg">Completing login...</p>' +
+      '<p id="msg">Step 0: Starting...</p>' +
       '<script>' +
       '(function(){' +
+      'var msg = document.getElementById("msg");' +
+      'msg.textContent = "Step 1: Got token from GitHub";' +
       'var token = ' + JSON.stringify(token) + ';' +
       'var provider = ' + JSON.stringify(provider) + ';' +
       'var payload = ' + JSON.stringify(successPayload) + ';' +
       'var opener = window.opener;' +
+      'msg.textContent = "Step 2: opener=" + (opener ? "exists" : "null");' +
       'if (opener) {' +
-      '  var msg = document.getElementById("msg");' +
-      '  // Step 1: tell main window we are authorizing' +
+      '  msg.textContent = "Step 3: posting authorizing:github to opener";' +
       '  opener.postMessage("authorizing:" + provider, "*");' +
-      '  msg.textContent = "Handshaking...";' +
-      '  // Step 2: wait for main window to acknowledge' +
+      '  msg.textContent = "Step 4: waiting for ack from opener...";' +
       '  var onMessage = function(e) {' +
+      '    msg.textContent = "Step 5: received message from opener: " + e.data.substring(0,50);' +
       '    if (e.data === "authorizing:" + provider) {' +
       '      window.removeEventListener("message", onMessage, false);' +
-      '      msg.textContent = "Authorized!";' +
-      '      // Step 3: send the token' +
+      '      msg.textContent = "Step 6: ack received, sending token...";' +
       '      opener.postMessage("authorization:" + provider + ":success:" + payload, "*");' +
-      '      window.close();' +
+      '      msg.textContent = "Step 7: token sent, closing popup";' +
+      '      setTimeout(function() { window.close(); }, 500);' +
       '    }' +
       '  };' +
       '  window.addEventListener("message", onMessage, false);' +
-      '  // Timeout: close popup if handshake fails' +
-      '  setTimeout(function() { window.close(); }, 15000);' +
+      '  // Timeout: redirect to admin with token in hash as fallback' +
+      '  setTimeout(function() {' +
+      '    msg.textContent = "Step 8: handshake timeout, using hash fallback...";' +
+      '    window.location.replace(' + JSON.stringify(adminUrl) + ' + "#access_token=" + encodeURIComponent(token) + "&provider=" + provider);' +
+      '  }, 8000);' +
       '} else {' +
-      '  // No popup opener — tell user to allow popups and try again' +
-      '  document.getElementById("msg").textContent = "Login complete! But the popup window was blocked by your browser. Please allow popups for this site, then go back and click Login with GitHub again.";' +
+      '  msg.textContent = "No opener found. Redirecting to admin with token...";' +
+      '  window.location.replace(' + JSON.stringify(adminUrl) + ' + "#access_token=" + encodeURIComponent(token) + "&provider=" + provider);' +
       '}' +
       '})();' +
       '</script></body></html>'
