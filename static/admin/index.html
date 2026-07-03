@@ -7,21 +7,5 @@
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3/dist/decap-cms.js"></script>
-  <script>
-  // Check for OAuth token stored by callback fallback
-  (function() {
-    try {
-      var token = localStorage.getItem('decap_cms_token');
-      if (token) {
-        localStorage.removeItem('decap_cms_token');
-        // Pass the token to Decap CMS via the auth store
-        setTimeout(function() {
-          var evt = new CustomEvent('decapAuth', { detail: { token: token } });
-          document.dispatchEvent(evt);
-        }, 1000);
-      }
-    } catch(e) {}
-  })();
-  </script>
 </body>
 </html>

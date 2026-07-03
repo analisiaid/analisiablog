@@ -6,6 +6,9 @@ export async function onRequest(context) {
 
   // --- /api/oauth/auth: redirect to GitHub ---
   if (path.endsWith('/auth')) {
+    // Read provider & scope from Decap CMS query params
+    const provider = url.searchParams.get('provider') || 'github'
+    const scope = url.searchParams.get('scope') || 'repo'
     const redirectUri = url.origin + '/api/oauth/callback'
     const state = crypto.randomUUID()
 
@@ -13,7 +16,7 @@ export async function onRequest(context) {
       'https://github.com/login/oauth/authorize?client_id=' +
       encodeURIComponent(env.GITHUB_CLIENT_ID) +
       '&redirect_uri=' + encodeURIComponent(redirectUri) +
-      '&scope=' + encodeURIComponent('repo user') +
+      '&scope=' + encodeURIComponent(scope + ' user') +
       '&state=' + encodeURIComponent(state)
 
     // Return HTML with JS redirect to preserve window.opener
@@ -29,7 +32,7 @@ export async function onRequest(context) {
     })
   }
 
-  // --- /api/oauth/callback: exchange code for token ---
+  // --- /api/oauth/callback: exchange code for token, then handshake via postMessage ---
   if (path.endsWith('/callback')) {
     const code = url.searchParams.get('code')
     if (!code) {
@@ -53,20 +56,45 @@ export async function onRequest(context) {
 
     const token = tokenData.access_token
 
-    // HTML that tries postMessage first, falls back to localStorage, then redirects to admin
+    // Decap CMS NetlifyAuthenticator expects a two-way postMessage handshake:
+    //   1. Popup posts "authorizing:github"  →  opener
+    //   2. Opener replies "authorizing:github"  →  popup
+    //   3. Popup posts "authorization:github:success:{json}"  →  opener
+    //
+    // If window.opener is null (same-window / no popup), fall back to localStorage + redirect.
+    const provider = 'github'
+    const successPayload = JSON.stringify({ token, provider })
+
     const html =
       '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Logged in!</title></head><body>' +
       '<p id="msg">Completing login...</p>' +
       '<script>' +
       '(function(){' +
       'var token = ' + JSON.stringify(token) + ';' +
+      'var provider = ' + JSON.stringify(provider) + ';' +
+      'var payload = ' + JSON.stringify(successPayload) + ';' +
       'var opener = window.opener;' +
       'if (opener) {' +
-      '  opener.postMessage({token: token}, "*");' +
-      '  window.close();' +
+      '  var msg = document.getElementById("msg");' +
+      '  // Step 1: tell main window we are authorizing' +
+      '  opener.postMessage("authorizing:" + provider, "*");' +
+      '  msg.textContent = "Handshaking...";' +
+      '  // Step 2: wait for main window to acknowledge' +
+      '  var onMessage = function(e) {' +
+      '    if (e.data === "authorizing:" + provider) {' +
+      '      window.removeEventListener("message", onMessage, false);' +
+      '      msg.textContent = "Authorized!";' +
+      '      // Step 3: send the token' +
+      '      opener.postMessage("authorization:" + provider + ":success:" + payload, "*");' +
+      '      window.close();' +
+      '    }' +
+      '  };' +
+      '  window.addEventListener("message", onMessage, false);' +
+      '  // Timeout: close popup if handshake fails' +
+      '  setTimeout(function() { window.close(); }, 15000);' +
       '} else {' +
-      '  try { localStorage.setItem("decap_cms_token", token); } catch(e) {}' +
-      '  document.getElementById("msg").textContent = "Login complete. Close this window and refresh the admin page.";' +
+      '  // No popup opener — tell user to allow popups and try again' +
+      '  document.getElementById("msg").textContent = "Login complete! But the popup window was blocked by your browser. Please allow popups for this site, then go back and click Login with GitHub again.";' +
       '}' +
       '})();' +
       '</script></body></html>'
