@@ -6,7 +6,6 @@ export async function onRequest(context) {
 
   // --- /api/oauth/auth: redirect to GitHub ---
   if (path.endsWith('/auth')) {
-    // Read provider & scope from Decap CMS query params
     const provider = url.searchParams.get('provider') || 'github'
     const scope = url.searchParams.get('scope') || 'repo'
     const redirectUri = url.origin + '/api/oauth/callback'
@@ -32,7 +31,7 @@ export async function onRequest(context) {
     })
   }
 
-  // --- /api/oauth/callback: exchange code for token, then handshake via postMessage ---
+  // --- /api/oauth/callback: exchange code for token, redirect to static handshake page ---
   if (path.endsWith('/callback')) {
     const code = url.searchParams.get('code')
     if (!code) {
@@ -55,59 +54,12 @@ export async function onRequest(context) {
     }
 
     const token = tokenData.access_token
+    const redirectUrl = url.origin + '/admin/auth-callback.html#access_token=' +
+      encodeURIComponent(token) + '&provider=github'
 
-    // Decap CMS NetlifyAuthenticator expects a two-way postMessage handshake:
-    //   1. Popup posts "authorizing:github"  →  opener
-    //   2. Opener replies "authorizing:github"  →  popup
-    //   3. Popup posts "authorization:github:success:{json}"  →  opener
-    //
-    // If window.opener is null, fall back to redirecting to admin with hash token.
-    const provider = 'github'
-    const successPayload = JSON.stringify({ token, provider })
-    const adminUrl = url.origin + '/admin/'
-
-    const html =
-      '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Logged in!</title></head><body>' +
-      '<p id="msg">Step 0: Starting...</p>' +
-      '<script>' +
-      '(function(){' +
-      'var msg = document.getElementById("msg");' +
-      'msg.textContent = "Step 1: Got token from GitHub";' +
-      'var token = ' + JSON.stringify(token) + ';' +
-      'var provider = ' + JSON.stringify(provider) + ';' +
-      'var payload = ' + JSON.stringify(successPayload) + ';' +
-      'var opener = window.opener;' +
-      'msg.textContent = "Step 2: opener=" + (opener ? "exists" : "null");' +
-      'if (opener) {' +
-      '  msg.textContent = "Step 3: posting authorizing:github to opener";' +
-      '  opener.postMessage("authorizing:" + provider, "*");' +
-      '  msg.textContent = "Step 4: waiting for ack from opener...";' +
-      '  var onMessage = function(e) {' +
-      '    msg.textContent = "Step 5: received message from opener: " + e.data.substring(0,50);' +
-      '    if (e.data === "authorizing:" + provider) {' +
-      '      window.removeEventListener("message", onMessage, false);' +
-      '      msg.textContent = "Step 6: ack received, sending token...";' +
-      '      opener.postMessage("authorization:" + provider + ":success:" + payload, "*");' +
-      '      msg.textContent = "Step 7: token sent, closing popup";' +
-      '      setTimeout(function() { window.close(); }, 500);' +
-      '    }' +
-      '  };' +
-      '  window.addEventListener("message", onMessage, false);' +
-      '  // Timeout: redirect to admin with token in hash as fallback' +
-      '  setTimeout(function() {' +
-      '    msg.textContent = "Step 8: handshake timeout, using hash fallback...";' +
-      '    window.location.replace(' + JSON.stringify(adminUrl) + ' + "#access_token=" + encodeURIComponent(token) + "&provider=" + provider);' +
-      '  }, 8000);' +
-      '} else {' +
-      '  msg.textContent = "No opener found. Redirecting to admin with token...";' +
-      '  window.location.replace(' + JSON.stringify(adminUrl) + ' + "#access_token=" + encodeURIComponent(token) + "&provider=" + provider);' +
-      '}' +
-      '})();' +
-      '</script></body></html>'
-
-    return new Response(html, {
-      headers: { 'Content-Type': 'text/html; charset=utf-8' },
-    })
+    // 302 redirect — no inline JS needed. The static auth-callback.html
+    // reads the token from the hash and does the postMessage handshake.
+    return Response.redirect(redirectUrl, 302)
   }
 
   return new Response('Not found. Try /auth or /callback', { status: 404 })

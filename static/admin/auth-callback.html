@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Authorizing...</title>
+</head>
+<body>
+<p id="msg">Authorizing...</p>
+
+<!-- Fallback: if JavaScript is blocked, redirect to admin after 5s -->
+<noscript>
+  <meta http-equiv="refresh" content="0;url=/admin/#nojs=1">
+</noscript>
+<script>
+(function() {
+  var p = document.getElementById("msg");
+
+  // Read token from URL hash
+  var hash = window.location.hash.replace(/^#/, '');
+  var params = new URLSearchParams(hash);
+  var token = params.get('access_token');
+  var provider = params.get('provider') || 'github';
+
+  if (!token) {
+    p.textContent = "No token found in URL. Redirecting...";
+    window.location.replace("/admin/");
+    return;
+  }
+
+  var payload = JSON.stringify({ token: token, provider: provider });
+
+  p.textContent = "Connecting...";
+
+  var opener = window.opener;
+  if (opener) {
+    // Step 1: tell opener we are authorizing
+    p.textContent = "Handshaking...";
+    opener.postMessage("authorizing:" + provider, "*");
+
+    // Step 2: wait for opener to acknowledge
+    var onMessage = function(e) {
+      if (e.data === "authorizing:" + provider) {
+        window.removeEventListener("message", onMessage, false);
+        p.textContent = "Authorized!";
+        // Step 3: send the token
+        opener.postMessage("authorization:" + provider + ":success:" + payload, "*");
+        window.close();
+      }
+    };
+    window.addEventListener("message", onMessage, false);
+
+    // Fallback: if handshake fails within 8s, redirect back to admin with notice
+    setTimeout(function() {
+      p.textContent = "Handshake timeout. Closing...";
+      window.location.replace("/admin/#retry=1");
+    }, 8000);
+  } else {
+    p.textContent = "No opener window. Redirecting to admin...";
+    window.location.replace("/admin/#retry=1");
+  }
+})();
+</script>
+</body>
+</html>
