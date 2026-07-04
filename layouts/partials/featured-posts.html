@@ -1,7 +1,7 @@
 <article class="featured-card">
   <a href="{{ .RelPermalink }}" class="featured-card-link">
     {{ with .Params.cover }}
-    <div class="featured-card-cover" style="background-image: url('{{ . | absURL }}');"></div>
+    <div class="featured-card-cover" style="background-image: url('{{ . }}');"></div>
     {{ end }}
     <div class="featured-card-body">
       {{ with .Params.categories }}

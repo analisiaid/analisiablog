@@ -115,7 +115,7 @@
     <article class="post-body-column">
       {{/* Cover image — inside the post body column */}}
       {{ with .Params.cover }}
-      <div class="post-cover" style="background-image: url('{{ . | absURL }}');"></div>
+      <div class="post-cover" style="background-image: url('{{ . }}');"></div>
       {{ end }}
 
       <div class="post-body">
