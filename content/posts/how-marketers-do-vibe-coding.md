@@ -5,8 +5,8 @@ description: Can we build a functioning web application using AI agents while
   maintaining good product, analytics, and security practices?
 categories:
   - Guides
-author: analisia id
-date: 2026-06-21T18:30:11Z
+author: Dimas Aji
+date: 2026-06-21T18:30:11.000Z
 cover: /images/uploads/CleanShot-2026-06-21-at-19.17.49@2x.png
 featured: true
 toc: true
