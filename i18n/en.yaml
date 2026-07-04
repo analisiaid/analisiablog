@@ -42,7 +42,7 @@ subscribe_benefit_1: "One tactical breakdown each week — bidding, creative, or
 subscribe_benefit_2: "Real campaign data and benchmarks you can act on Monday."
 subscribe_benefit_3: "Early access to our teardowns and template drops."
 subscribe_benefit_4: "Zero spam. One email, every Tuesday morning."
-subscribe_social_proof: "Join 12,400 marketers · One email every Tuesday · No spam"
+subscribe_social_proof: "Marketing insights that help you grow - not fill you inbox."
 subscribe_name_label: "First name"
 subscribe_name_placeholder: "Your name"
 subscribe_email_label: "Email address"
@@ -65,7 +65,7 @@ subscribe_network_error_body: "We couldn't reach the server. Check your connecti
 # Subscribe inline CTA
 subscribe_cta_eyebrow: "The Analisia Blog"
 subscribe_hero_heading: "Performance marketing, decoded every week."
-subscribe_hero_social: "Join 12,400 marketers · One email every Tuesday · No spam"
+subscribe_hero_social: "Marketing insights that help you grow - not fill you inbox."
 subscribe_inline_headline: "Get the weekly performance digest"
 subscribe_inline_desc: "One email every Tuesday. Tactical breakdowns like this one — no fluff. Join 12,400 marketers."
 
