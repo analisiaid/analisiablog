@@ -1,12 +1,15 @@
 ---
 title: Bye Google Signals 👋
 slug: bye-google-signals
-date: "2023-12-10T22:30:42Z"
-draft: false
-readingTime: true
+description: Harga Bulan Januari Turun -15%? Google Signals will be gone from reporting?
+categories:
+  - News
+author: Dimas Aji
+date: 2023-12-10T22:30:42Z
+cover: https://images.unsplash.com/photo-1587591595182-637c7e822c37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDV8fHNpZ25hbHxlbnwwfHx8fDE3Mzg3NzI4OTB8MA&ixlib=rb-4.0.3&q=80&w=2000
 toc: true
-author: analisia id
-cover: "https://images.unsplash.com/photo-1587591595182-637c7e822c37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDV8fHNpZ25hbHxlbnwwfHx8fDE3Mzg3NzI4OTB8MA&ixlib=rb-4.0.3&q=80&w=2000"
+readingTime: true
+draft: false
 ---
 
 _Good morning_ 👋
