@@ -1,12 +1,16 @@
 ---
 title: How Marketers Do Vibe Coding
 slug: how-marketers-do-vibe-coding
-date: "2026-06-21T18:30:11Z"
-draft: false
-readingTime: true
-toc: true
+description: Can we build a functioning web application using AI agents while
+  maintaining good product, analytics, and security practices?
+categories:
+  - Guides
 author: analisia id
-cover: "/images/uploads/CleanShot-2026-06-21-at-19.17.49@2x.png"
+date: 2026-06-21T18:30:11Z
+cover: /images/uploads/CleanShot-2026-06-21-at-19.17.49@2x.png
+toc: true
+readingTime: true
+draft: false
 ---
 
 At Analisia, we've spent our weekends building a vibe-coded web application. This wasn't meant to be a startup idea or a business venture. It was simply a learning exercise.
