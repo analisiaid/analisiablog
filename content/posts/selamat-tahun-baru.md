@@ -1,12 +1,16 @@
 ---
 title: Selamat Tahun Baru 🍻
 slug: selamat-tahun-baru
-date: "2024-01-07T22:30:19Z"
-draft: false
-readingTime: true
+description: TikTok's 2024 Marketing Calendar? SEO Heist Gone Wrong? 2024 Core
+  Web Vital Tech Report?
+categories:
+  - News
+author: Dimas Aji
+date: 2024-01-07T22:30:19Z
+cover: https://images.unsplash.com/photo-1467810563316-b5476525c0f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fG5ldyUyMHllYXJ8ZW58MHx8fHwxNzM4NzcyNzk0fDA&ixlib=rb-4.0.3&q=80&w=2000
 toc: true
-author: analisia id
-cover: "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fG5ldyUyMHllYXJ8ZW58MHx8fHwxNzM4NzcyNzk0fDA&ixlib=rb-4.0.3&q=80&w=2000"
+readingTime: true
+draft: false
 ---
 
 _Guess what? It's that time of the year again – the confetti has settled, the fireworks have lit up the sky, and we're all set to dive into the awesomeness that is 2024\! Happy New Year\! 🥳_
