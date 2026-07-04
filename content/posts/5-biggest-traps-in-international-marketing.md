@@ -1,12 +1,15 @@
 ---
 title: 5 Biggest Traps in International Marketing
 slug: 5-biggest-traps-in-international-marketing
-date: "2025-11-10T15:39:29Z"
-draft: false
-readingTime: true
-toc: true
+description: Expanding internationally isn’t just about translating your
+  content, it’s about understanding the culture, behavior, and platforms.
 author: susilawati habib haryo
+date: 2025-11-10T15:39:29Z
 cover: /images/uploads/photo-1659835547789-cb00dbd213c4.jpeg
+featured: true
+toc: true
+readingTime: true
+draft: false
 ---
 
 > Expanding internationally isn’t just about translating your content, it’s about understanding the culture, behavior, and platforms. Take China, for example: customers often use WeChat to verify a brand before they even consider buying, showing that trust-building has to be local. Localize your strategy, split campaigns by region, and pay attention to timing, platforms, and consumer behavior. When you do, you don’t just reach a new market, you actually engage and convert.
