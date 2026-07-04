@@ -1,12 +1,16 @@
 ---
 title: We Tried Google’s Meridian for MMM. Here's What We Learned.
 slug: meridian-test
-date: "2025-03-15T07:31:50Z"
-draft: false
-readingTime: true
-toc: true
-author: susilawati habib haryo
+description: This free, open-source tool helped us uncover how different
+  marketing channels drive revenue.
+categories:
+  - Analytics
+author: Dimas Aji
+date: 2025-03-15T07:31:50Z
 cover: /images/uploads/josh-appel-NeTPASr-bmQ-unsplash.jpg
+toc: true
+readingTime: true
+draft: false
 ---
 
 We recently tested Meridian by Google for Marketing Mix Modeling \(MMM\), and the results were fascinating\! This free, open-source tool helped us uncover how different marketing channels drive revenue.
