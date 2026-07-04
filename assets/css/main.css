@@ -1958,6 +1958,7 @@ img {
   .subscribe-cta-input {
     width: 100%;
     height: 46px;
+    flex: none;
   }
   .subscribe-cta-button {
     width: 100%;
