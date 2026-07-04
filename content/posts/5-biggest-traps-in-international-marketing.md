@@ -5,8 +5,8 @@ description: Expanding internationally isn’t just about translating your
   content, it’s about understanding the culture, behavior, and platforms.
 categories:
   - Strategy
-author: susilawati habib haryo
-date: 2025-11-10T15:39:29Z
+author: Susilawati Habib
+date: 2025-11-10T15:39:29.000Z
 cover: /images/uploads/photo-1659835547789-cb00dbd213c4.jpeg
 featured: true
 toc: true
