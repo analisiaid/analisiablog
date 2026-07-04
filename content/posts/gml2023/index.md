@@ -1,0 +1,148 @@
+---
+title: "🤖 AI Everywhere! #GML2023 Recap"
+slug: gml2023
+date: "2023-05-28T22:17:42Z"
+draft: false
+readingTime: true
+toc: true
+author: analisia id
+---
+
+Good Morning, 
+
+We hope our newsletter brings you a refreshing start to your Monday\!
+
+In this newsletter, we are going to cover the following:
+
+  1. Google Marketing Live 2023 Recap
+  2. FB Aggregated Event Measurement Updates
+  3. TikTok Viral Videos in Decline
+  4. Google Ending Cookies Tracking for 1% of Chrome Users in Early 2024
+  5. Understanding News Topic Authority in SEO
+
+
+
+* * *
+
+### 1️⃣ Oleh-Oleh Dari Google Marketing Live 2023 
+
+Event tahunan dari Google untuk memperkenalkan produk & inovasi terbaru untuk industri marketing. Berikut oleh-oleh dari \#GML2023 minggu lalu:
+
+**Conversational Experience in Google Ads**
+
+![](https://digitalpress.fra1.cdn.digitaloceanspaces.com/32x2gs0/2023/05/image-41.png)
+
+Di Fitur yang saat ini ada, sebenarnya uda ngerasa kebantu banget dengan suggested keywords dan copy. Mirip dengan \#ChatGPT, fitur baru ini membantu melakukan beberapa operasi di Google Ads seperti membuat kata kunci, ad copy, atau gambar, melalui _prompt_. 
+
+_It's pretty cool, isn't it?_
+
+**Product Studio**
+
+![](https://digitalpress.fra1.cdn.digitaloceanspaces.com/32x2gs0/2023/05/image-28.png)
+
+ _Familiar with Midjourney, Dalle, or Stable Diffusion tools?_ Google punya Product Studio, tools yang mampu melakukan proses editing gambar \(misalnya menghapus _background_\) melalui _prompt – and it's free_\!
+
+Fitur baru ini akan mulai tesedia akhir tahun 2023 di platform Google Merchant Center & Shopify in English in the US.
+
+**Video View Campaigns**
+
+![](https://digitalpress.fra1.cdn.digitaloceanspaces.com/32x2gs0/2023/05/image-42.png)
+
+ _New campaign type_ di Google Ads ini akan difokuskan untuk reach sebanyak mungkin orang di platform Youtube dengan mengkobinasikan __TrueView In-stream, In-feed, and Short Ads__. Dari Alpha testing yang dilakukan oleh Google, _campaign_ ini mampu menghasilkan **+40% views lebih banyak** dari _regular campaign_. Cost per view \(CPV\) akan dipakai sebagai _pricing model & beta will be available next month\!_
+
+**Demand Generation Campaign**
+
+![](https://digitalpress.fra1.cdn.digitaloceanspaces.com/32x2gs0/2023/05/image-35.png)
+
+Ingat, Google Demand generation campaign **TIDAK SAMA** dengan FB Lead Generation campaign. _New campaign type_ dari Google tidak mengarahkan users ke lead form melainkan langsung ke _brand's website_. _AI-powered Ads_ ini akan ditampilkan across _YouTube Shorts, YouTube in-stream, YouTube in-feed, Discover & Gmail placements_. 
+
+![](https://digitalpress.fra1.cdn.digitaloceanspaces.com/32x2gs0/2023/05/image-37.png)
+
+Selain itu, Demand gen campaign akan menyediakan fitur **Lookalike segments** menggukan _first-party data & Youtube users_ dengan pilihan _targeting reach_ ; _narrow 2.5%, balanced 5%, or broad 10%_.
+
+**Broad Match Brand Controls**
+
+![](https://digitalpress.fra1.cdn.digitaloceanspaces.com/32x2gs0/2023/05/image-29.png)
+
+Batasi iklan untuk tampil di _competitor keywords_ dengan menggunakan _[broad match](<https://support.google.com/google-ads/answer/2407779?hl=en-GB>)_ _keyword_ dikombinasikan dengan daftar nama kompetitor. _This feature is now in Beta\!_
+
+**Text & Shopping Ads Can Appear in Search Generative Experience \(SGE\)**
+
+![](https://digitalpress.fra1.cdn.digitaloceanspaces.com/32x2gs0/2023/05/Here-is-how-Google-Ads-in-the-Google-Search-Generative-Experience-conversation-l-look---GIF.gif)[barry schwartz](<https://twitter.com/rustybrick/status/1661052105606430720>)
+
+ _It's currently[beta](<https://labs.withgoogle.com/>) in the US._
+
+**Automatically Created Assets**
+
+Menggunakan Generative AI, Google akan secara otomatis membuat asset baru menggunakan text yang ada di landing page & existing asset di akun Google Ads.
+
+_Not 100% new\!_ karena sekarang _by default_ Google akan mengaktifkan fitur _[automatically created asset](<https://support.google.com/google-ads/answer/11259373?hl=en#:~:text=Automatically%20created%20assets%20are%20an,for%20your%20responsive%20search%20ads.>)_ untuk campaign baru di Google Ads, _unless we opt-out._
+
+**New Value-based Bidding Goals & Asset Creation Flow Are Coming to PMax**
+
+![](https://digitalpress.fra1.cdn.digitaloceanspaces.com/32x2gs0/2023/05/image-33.png)
+
+  * Sebentar lagi di PMax Campaign bisa memilih _acquire high lifetime value \(LTV\) customers_ sebagai objektif campaign.
+  * Cukup dengan memasukkan landing page URL, Google akan secara otomatis membuat asset baru untuk Performance Max \(PMax\) campaign.
+
+
+
+**Google Merchant Center Next**
+
+![](https://digitalpress.fra1.cdn.digitaloceanspaces.com/32x2gs0/2023/05/image-38.png)
+
+[Google Merchant Center](<https://www.google.com/intl/en_uk/retail/solutions/merchant-center/?mcsubid=gb-en-ha-mc-bk-c-mce%21o3>) yang didesain untuk Usaha Mikro, Kecil, dan Menengah \(UMKM\) yang tidak membutuhkan _[product feed](<Google Merchant Center Next designed for smaller merchants. Doesn't require a product feed; uses data from website.>)_ melainkan membaca data produk seperti gambar, harga dari website secara otomatis. 
+
+* * *
+
+### 2️⃣ Simplified Facebook Conversion Campaigns
+
+Inget kan 2 tahun lalu ketika Apple mengumumkan fitur [Opt Out of App Tracking on iOS 14.5](<https://support.apple.com/en-gb/HT212025>), Facebook langsung gercep meluncurkan fitur [Aggregated Event Measurement](<https://en-gb.facebook.com/business/help/721422165168355?id=1877298665783613>) di Ads Manager untuk agar tetap bisa mengukur efektifitas iklan dari users yang melakukan _opt out_ di iPhone mereka. Untuk memaksimalkan fitur Aggregated Event Measurement, advertisers harus menyelesaikan beberapa checklist dari Facebook, misalnya _event-mapping, verify domain, etc – lumayan repot kan?_
+
+![](https://digitalpress.fra1.cdn.digitaloceanspaces.com/32x2gs0/2023/05/image-44.png)
+
+Eh baru-baru ini Facebook bilang checklist tersebut[ tidak perlu dilakukan](<https://www.facebook.com/business/help/721422165168355?id=1877298665783613>) guys 😅
+
+  *  _No Need to Prioritize 8 Conversion Events_
+  *  _No Need to Turn on Value Sets to Optimize for Value_
+  *  _Aggregated Event Measurement Tab Will Be Removed_
+  *  _No Longer Required to Verify Your Domain_
+  *  _No Need to Select a Conversion Domain_
+
+
+
+No action is needed\! 🏖️
+
+* * *
+
+### 3️⃣ Udah Makin Sedikit Video Viral di TikTok?
+
+Baru-baru ini data dari Trendpop memperlihatkan jumlah video yang memiliki total tayangan kebih dari 10 juta mengalami penurunan.
+
+![](https://digitalpress.fra1.cdn.digitaloceanspaces.com/32x2gs0/2023/05/image-25.png)[trendpop](<https://www.trendpop.com/>)
+
+Dapat kita lihat di atas bahwa video dengan lebih dari 10 juta penayangan mulai pengalami penurunan sejak awal bulan Maret 2023. Rata-rata penurunan sebanyak 4,600 video per minggu – _what's happening here? TikTok updated their algorithm? Atau memang sudah berkurang saja hype-nya?_
+
+* * *
+
+### 4️⃣ Google Will Disable Third-party Cookies for 1% of Chrome Users in Q1/2024
+
+![](https://digitalpress.fra1.cdn.digitaloceanspaces.com/32x2gs0/2023/05/image-43.png) _cookies vs topic api_
+
+It's happening\! Google akan menghapus 3rd party cookies dari[ 1% of Chrome users](<https://www.privacysandbox.com/news/the-next-stages-of-privacy-sandbox-general-availability>) di Q1 2024, sebagai penggantinya Google akan menyediakan [Topics API](<https://blog.google/products/chrome/get-know-new-topics-api-privacy-sandbox/>) di mana lebih melindungi _user privacy_.
+
+_We're super excited\! dan worry juga sebenernya..._
+
+### 5️⃣ Understanding News Topic Authority in SEO
+
+Another new blogpost on Google Search Central... kali ini membahas **[Topic Authority](<https://developers.google.com/search/blog/2023/05/understanding-news-topic-authority>)** , sebuah sistem yang dibuat oleh Google untuk membantu menentukan sumber pakar \(_expert sources_\) mana yang pas & bermanfaat ketika seseorang mencari sebuah kata kunci di Google, misalnya terkait kesehatan, politik, atau keuangan. Google bilang ada 3 sinyal yang paling menonjol:
+
+  * **_How notable a source is for a topic or location_ **– ambil contoh, ketika orang sedang mencari berita sepakbola kesebelasan Persib Bandung, kemungkinan besar mereka akan membuka simaung.com
+  * ** _Influence and original reporting_** – media yang pertama kali meliput berita.
+  * **_Source reputation_**
+
+
+
+[Google](<https://twitter.com/searchliaison/status/1661057588052606977>) add a bit more; 
+
+> This isn't a new system that's just launched. We've used it for several years. Our post today is part of our regular efforts to share more about how ranking works.
