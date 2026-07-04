@@ -22,7 +22,11 @@ collections:
       - {label: "Description", name: "description", widget: "string", hint: "SEO meta description, max 155 characters"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list", required: false}
-      - {label: "Categories", name: "categories", widget: "list", required: false}
+      - label: "Categories"
+        name: "categories"
+        widget: "list"
+        required: false
+        field: {label: "Category", name: "category", widget: "select", options: ["Guides", "Analytics", "Strategy", "Creative", "Case Studies", "News"]}
       - {label: "Author", name: "author", widget: "string", required: false}
       - {label: "Author Title", name: "author_title", widget: "string", required: false, hint: "e.g. Head of Paid Media"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
