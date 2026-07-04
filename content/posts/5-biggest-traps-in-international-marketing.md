@@ -3,6 +3,8 @@ title: 5 Biggest Traps in International Marketing
 slug: 5-biggest-traps-in-international-marketing
 description: Expanding internationally isn’t just about translating your
   content, it’s about understanding the culture, behavior, and platforms.
+categories:
+  - Strategy
 author: susilawati habib haryo
 date: 2025-11-10T15:39:29Z
 cover: /images/uploads/photo-1659835547789-cb00dbd213c4.jpeg
