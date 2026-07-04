@@ -7,7 +7,7 @@ categories:
   - Strategy
 author: Susilawati Habib
 date: 2025-11-10T15:39:29.000Z
-cover: /images/uploads/photo-1659835547789-cb00dbd213c4.jpeg
+cover: https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 featured: true
 toc: true
 readingTime: true
