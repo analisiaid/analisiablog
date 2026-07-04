@@ -1,11 +1,14 @@
 ---
 title: Tokopedia 👉👈 TikTok
 slug: tokopedia
-date: "2023-11-27T08:04:05Z"
-draft: false
-readingTime: true
+description: Tokopedia x TikTok Could Be Good Move
+categories:
+  - News
+author: Dimas Aji
+date: 2023-11-27T08:04:05Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Good morning,_
