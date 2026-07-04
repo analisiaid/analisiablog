@@ -1,11 +1,14 @@
 ---
 title: Bisa Email Otomatis 🤩
 slug: kirim-email-otomatis
-date: "2023-11-19T22:30:28Z"
-draft: false
-readingTime: true
+description: Bisa Kirim Email Otomatis Dari Google Analytics 4
+categories:
+  - News
+author: Dimas Aji
+date: 2023-11-19T22:30:28Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Good Morning,_
