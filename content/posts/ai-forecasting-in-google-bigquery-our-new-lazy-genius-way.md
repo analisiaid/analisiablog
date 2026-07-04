@@ -1,12 +1,16 @@
 ---
 title: "AI Forecasting in Google BigQuery:  Our New Lazy Genius Way"
 slug: ai-forecasting-in-google-bigquery-our-new-lazy-genius-way
-date: "2025-07-21T09:22:22Z"
-draft: false
-readingTime: true
+description: Are you tired answering, how's the traffic going to look like in
+  the next 30 days?
+categories:
+  - Analytics
+author: Susilawati Habib
+date: 2025-07-21T09:22:22Z
+cover: https://images.unsplash.com/photo-1712002641088-9d76f9080889?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDd8fGFpfGVufDB8fHx8MTc1MzAxMzEwN3ww&ixlib=rb-4.1.0&q=80&w=2000
 toc: true
-author: susilawati habib haryo
-cover: "https://images.unsplash.com/photo-1712002641088-9d76f9080889?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDd8fGFpfGVufDB8fHx8MTc1MzAxMzEwN3ww&ixlib=rb-4.1.0&q=80&w=2000"
+readingTime: true
+draft: false
 ---
 
 Are you tired answering, how's the traffic going to look like in the next 30 days?  
