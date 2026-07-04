@@ -1,12 +1,15 @@
 ---
 title: "[Case Study] Kenapa AZKO Kehilangan Pengunjung Website di Awal Tahun?"
 slug: case-study-kenapa-azko-kehilangan-pengunjung-website-di-awal-tahun
-date: "2025-02-09T11:52:55Z"
-draft: false
-readingTime: true
+description: Bagaimana AZKO kehilangan puluhan ribu pengunjung dari Google.
+categories:
+  - Case Studies
+author: Dimas Aji
+date: 2025-02-09T11:52:55Z
+cover: https://images.unsplash.com/photo-1613396229897-35c31dca86be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fGFjZSUyMGhhcmR3YXJlfGVufDB8fHx8MTczOTEwMTkyMHww&ixlib=rb-4.0.3&q=80&w=2000
 toc: true
-author: analisia id
-cover: "https://images.unsplash.com/photo-1613396229897-35c31dca86be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fGFjZSUyMGhhcmR3YXJlfGVufDB8fHx8MTczOTEwMTkyMHww&ixlib=rb-4.0.3&q=80&w=2000"
+readingTime: true
+draft: false
 ---
 
 Siapa yang nggak kenal dengan brand Ace Hardware? Toko perlengkapan rumah tangga yang sudah berdiri lebih dari 30 tahun di Indonesia. Yang bikin gue terkejut, masuk tahun 2025 kemarin, mereka berganti nama menjadi AZKO. Di waktu yang bersamaan, mereka kehilangan puluhan ribu pengunjung dari Google. Kok bisa? Yuk, simak hasil investigasi gue\!
