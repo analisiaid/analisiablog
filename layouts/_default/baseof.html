@@ -17,6 +17,7 @@
 
   {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  <link rel="icon" type="image/svg+xml" href="{{ "/favicon.svg" | relURL }}">
 </head>
 <body>
   {{ partial "header" . }}
