@@ -1768,6 +1768,81 @@ img {
 }
 
 /* =====================================
+   SITEMAP
+   ===================================== */
+.sitemap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 40px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.sitemap-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sitemap-category {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--brand-accent);
+}
+
+.sitemap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sitemap-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.sitemap-link {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: color 0.2s;
+}
+
+.sitemap-link:hover {
+  color: var(--brand-accent);
+}
+
+.sitemap-date {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+@media (max-width: 768px) {
+  .sitemap {
+    padding: 24px 20px 48px;
+    gap: 28px;
+  }
+  .sitemap-category {
+    font-size: 18px;
+  }
+  .sitemap-link {
+    font-size: 15px;
+  }
+}
+
+/* =====================================
    RESPONSIVE — TABLET (≤1024px)
    ===================================== */
 @media (max-width: 1024px) {

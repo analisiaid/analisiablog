@@ -1,0 +1,62 @@
+{{ define "main" }}
+<div class="page-wrapper">
+  <section class="category-hero">
+    <h1 class="category-hero-heading">Sitemap</h1>
+    <p class="category-hero-desc">All posts published on Analisia Blog.</p>
+  </section>
+
+  <section class="sitemap">
+    {{ $posts := where .Site.RegularPages "Section" "posts" }}
+    {{ $categories := slice "Guides" "Analytics" "Strategy" "Creative" "Case Studies" "News" }}
+
+    {{ range $cat := $categories }}
+      {{ $catPosts := where $posts "Params.categories" "intersect" (slice $cat) }}
+      {{ if $catPosts }}
+      <div class="sitemap-group">
+        <h2 class="sitemap-category">{{ $cat }}</h2>
+        <ul class="sitemap-list">
+          {{ range $catPosts }}
+          <li class="sitemap-item">
+            <a href="{{ .RelPermalink }}" class="sitemap-link">{{ .Title }}</a>
+            <span class="sitemap-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    {{ end }}
+
+    {{/* Uncategorized posts */}}
+    {{ $uncategorized := where $posts "Params.categories" "=" nil }}
+    {{ $uncategorized = $uncategorized | append (where $posts "Params.categories" "len" 0) }}
+    {{ if $uncategorized }}
+    <div class="sitemap-group">
+      <h2 class="sitemap-category">Other</h2>
+      <ul class="sitemap-list">
+        {{ range $uncategorized }}
+        <li class="sitemap-item">
+          <a href="{{ .RelPermalink }}" class="sitemap-link">{{ .Title }}</a>
+          <span class="sitemap-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    {{/* Pages */}}
+    {{ $pages := where .Site.RegularPages "Section" "not in" (slice "posts") }}
+    {{ if $pages }}
+    <div class="sitemap-group">
+      <h2 class="sitemap-category">Pages</h2>
+      <ul class="sitemap-list">
+        {{ range $pages }}
+        <li class="sitemap-item">
+          <a href="{{ .RelPermalink }}" class="sitemap-link">{{ .Title }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </section>
+</div>
+{{ end }}
