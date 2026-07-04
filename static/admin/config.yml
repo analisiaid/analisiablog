@@ -2,7 +2,7 @@ backend:
   name: github
   repo: analisiaid/analisiablog
   branch: main
-  base_url: https://analisiablog.pages.dev
+  base_url: https://blog.analisia.id
   auth_endpoint: api/oauth/auth
 
 media_folder: "static/images/uploads"
