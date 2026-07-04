@@ -1,12 +1,15 @@
 ---
 title: 35 Triliun Per Hari 🤑
 slug: 35-triliun-per-hari
-date: "2023-12-24T22:30:06Z"
-draft: false
-readingTime: true
+description: Shopify BFCM 2023? First-Party Data in GA4? Looker Studio Updates?
+categories:
+  - News
+author: Dimas Aji
+date: 2023-12-24T22:30:06Z
+cover: https://images.unsplash.com/photo-1616645004064-aebe96923cbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDZ8fGdldHRpbmclMjByaWNofGVufDB8fHx8MTczODc3MjgzMnww&ixlib=rb-4.0.3&q=80&w=2000
 toc: true
-author: analisia id
-cover: "https://images.unsplash.com/photo-1616645004064-aebe96923cbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDZ8fGdldHRpbmclMjByaWNofGVufDB8fHx8MTczODc3MjgzMnww&ixlib=rb-4.0.3&q=80&w=2000"
+readingTime: true
+draft: false
 ---
 
 _Good morning ho..ho..ho.. 🎅_
