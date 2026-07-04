@@ -5,7 +5,7 @@ description: Can we build a functioning web application using AI agents while
   maintaining good product, analytics, and security practices?
 categories:
   - Guides
-author: Dimas Aji
+author: Susilawati Habib
 date: 2026-06-21T18:30:11.000Z
 cover: /images/uploads/cleanshot-2026-07-04-at-13.46.25-2x.png
 featured: true
