@@ -1,11 +1,15 @@
 ---
 title: Dapat Uang dari Reels  💸💵
 slug: dapat-uang-dari-reels
-date: "2023-04-17T03:07:19Z"
-draft: false
-readingTime: true
+description: 4 perbaruan baru di Reels untuk membantu content creators
+  memaksimalkan penghasilan & performansi konten.
+categories:
+  - News
+author: Dimas Aji
+date: 2023-04-17T03:07:19Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 Morning All,
