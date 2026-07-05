@@ -1,11 +1,14 @@
 ---
 title: Mulai 1️⃣0️⃣ Oktober
 slug: mulai-10-oktober
-date: "2023-10-16T22:30:14Z"
-draft: false
-readingTime: true
+description: Google Demand Gen Campaigns are Out! Swipe Left on Reels?
+categories:
+  - News
+author: Dimas Aji
+date: 2023-10-16T22:30:14Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _We're really sorry for the delay in getting you that update. Things got a bit hectic on our end. A quicky update for this week:_
