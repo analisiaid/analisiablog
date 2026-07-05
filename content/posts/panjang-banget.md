@@ -1,11 +1,14 @@
 ---
 title: Panjang Banget 🫣
 slug: panjang-banget
-date: "2023-03-27T21:30:30Z"
-draft: false
-readingTime: true
+description: Bisa menontonton video Reels di story sampai dengan 60 detik 😭
+categories:
+  - News
+author: Dimas Aji
+date: 2023-03-27T21:30:30Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 Happy Tuesday\! 
