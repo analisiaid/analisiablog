@@ -1,11 +1,15 @@
 ---
 title: TikTok Ad Library 👀
 slug: tiktok-ad-library
-date: "2023-07-23T22:30:48Z"
-draft: false
-readingTime: true
+description: Suka ngerasa kehabisan ide atau penasaran konten spesifik brand
+  lain? Cek TikTok Ad Library!
+categories:
+  - News
+author: Dimas Aji
+date: 2023-07-23T22:30:48Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Good morning, sleepyheads\!_
