@@ -1,11 +1,14 @@
 ---
-title: "Buku Sakti RSA, Mau?🤩🤩"
+title: Buku Sakti RSA, Mau?🤩🤩
 slug: buku-sakti-rsa-mau
-date: "2023-08-13T22:07:39Z"
-draft: false
-readingTime: true
+description: Buku Saku Responsive Search Ads by Google
+categories:
+  - News
+author: Dimas Aji
+date: 2023-08-13T22:07:39Z
 toc: true
-author: susilawati habib haryo
+readingTime: true
+draft: false
 ---
 
 Can't believe summer is going to be over soon, but let's rise and shine karena gajian masih 2 minggu lagi 👩‍💻👨‍💻.
