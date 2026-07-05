@@ -1,11 +1,14 @@
 ---
 title: Shopee Live Full Senyum 😊
 slug: shopee-live-full-senyum
-date: "2023-10-08T22:30:24Z"
-draft: false
-readingTime: true
+description: First Generative AI in Facebook Ads Manager
+categories:
+  - News
+author: Dimas Aji
+date: 2023-10-08T22:30:24Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 Ku terbiasa.. Tersenyum tenang walau ah... Hatiku menangis.. 🎶🎶
