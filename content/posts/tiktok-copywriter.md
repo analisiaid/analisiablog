@@ -1,11 +1,14 @@
 ---
 title: TikTok 🫶 Copywriter
 slug: tiktok-copywriter
-date: "2023-03-12T22:30:30Z"
-draft: false
-readingTime: true
+description: OMG! TikTok sekarang udah jadi _thenew Search Engine for Gen Z
+categories:
+  - News
+author: Dimas Aji
+date: 2023-03-12T22:30:30Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 Good morning & happy Monday\! We hope you have a great start to your week ☕
