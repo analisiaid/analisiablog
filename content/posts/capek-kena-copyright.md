@@ -1,11 +1,14 @@
 ---
 title: Capek Kena Copyright 😭
 slug: capek-kena-copyright
-date: "2023-03-05T22:30:57Z"
-draft: false
-readingTime: true
+description: Meta Advantage+ Brings 20% More Conversions
+categories:
+  - News
+author: Dimas Aji
+date: 2023-03-05T22:30:57Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 Rise and shine marketers\! ✨
