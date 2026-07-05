@@ -1,11 +1,16 @@
 ---
-title: "Bisa 10% Lebih Mahal 😡"
+title: Bisa 10% Lebih Mahal 😡
 slug: bisa-10-lebih-mahal
-date: "2023-09-24T22:30:28Z"
-draft: false
-readingTime: true
+description: Last-click attribution _undervalues TikTok conversions by 73% ,
+  while 79% of purchases that TikTok drives are not captured through common
+  attribution methods?
+categories:
+  - News
+author: Dimas Aji
+date: 2023-09-24T22:30:28Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Good morning, cherished readers\! Semoga kominfo gak ada acara blokir Google Docs lagi yaa 😁_
