@@ -1,11 +1,14 @@
 ---
-title: "Reach Naik, Tapi Syaratnya 🤫"
+title: Reach Naik, Tapi Syaratnya 🤫
 slug: reach-naik-tapi-syaratnya
-date: "2023-11-05T22:30:32Z"
-draft: false
-readingTime: true
+description: More power for creators on Meta & welcoming Product Studio on Merchant Center
+categories:
+  - News
+author: Dimas Aji
+date: 2023-11-05T22:30:32Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 🗣️ ditawarin makan di rumah vincen, makan mangkokku belinya lima puluh ribu
