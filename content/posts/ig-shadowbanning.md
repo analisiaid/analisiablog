@@ -1,11 +1,15 @@
 ---
 title: IG Shadowbanning Is A Myth 👻
 slug: ig-shadowbanning
-date: "2023-06-04T22:30:49Z"
-draft: false
-readingTime: true
+description: Bagimana instagram memfilter & memberikan ranking terhadap konten
+  sebelum ditampilkan ke pengguna di aplikasi mereka?
+categories:
+  - News
+author: Dimas Aji
+date: 2023-06-04T22:30:49Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Good morning\!_ 👋 We _hope you had a restful weekend. Wishing you a productive and successful Monday ahead._
