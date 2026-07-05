@@ -1,11 +1,14 @@
 ---
-title: "75% Milenial Gak Suka Ditelfon"
+title: 75% Milenial Gak Suka Ditelfon
 slug: milenial-gak-suka-ditelfon
-date: "2023-11-12T22:30:49Z"
-draft: false
-readingTime: true
+description: Iklan Politik Boleh Pakai AI, Tapi Updated Lead Ad Campaign on Meta?
+categories:
+  - News
+author: Dimas Aji
+date: 2023-11-12T22:30:49Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 Good morning, 
