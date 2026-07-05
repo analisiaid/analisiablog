@@ -121,10 +121,8 @@
       <div class="post-body">
         {{ .Content }}
 
-        {{/* Inline subscribe CTA — skip on pages that embed it inline via shortcode */}}
-        {{ if ne .Slug "about" }}
+        {{/* Inline subscribe CTA */}}
         {{ partial "subscribe-cta" . }}
-        {{ end }}
       </div>
     </article>
   </div>
