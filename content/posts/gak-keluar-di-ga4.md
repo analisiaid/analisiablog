@@ -1,11 +1,15 @@
 ---
 title: Gak Keluar di GA4 😤
 slug: gak-keluar-di-ga4
-date: "2023-09-10T22:30:40Z"
-draft: false
-readingTime: true
+description: Influencer Marketing Spending Is 3.5x Faster Than Ad Spending?
+  Total Revenue Gak Keluar di Google Analytics?
+categories:
+  - News
+author: Dimas Aji
+date: 2023-09-10T22:30:40Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Good morning, friends\! May your day be as bright as the rising sun 🌞_
