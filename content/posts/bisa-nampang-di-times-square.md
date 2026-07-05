@@ -1,11 +1,14 @@
 ---
 title: Bisa Nampang di Times Square 🗽
 slug: bisa-nampang-di-times-square
-date: "2023-10-22T23:35:41Z"
-draft: false
-readingTime: true
+description: Netizen Lebih Makin Mengunjungi X (Eh Twitter)
+categories:
+  - News
+author: Dimas Aji
+date: 2023-10-22T23:35:41Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Good morning 👋_
