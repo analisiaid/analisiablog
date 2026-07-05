@@ -1,11 +1,14 @@
 ---
 title: TikTok Shop ⚡️ Tanah Abang
 slug: tiktok-shop
-date: "2023-10-01T22:30:17Z"
-draft: false
-readingTime: true
+description: Goodbye Google Optimize & What Director of Google Analytics has said about GA4.
+categories:
+  - News
+author: Dimas Aji
+date: 2023-10-01T22:30:17Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Good morning, fellow dreamers\! Don't worry if you woke up on the wrong side of the bed—there's still time to switch sides and make it right\!_
