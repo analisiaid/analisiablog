@@ -1,11 +1,15 @@
 ---
 title: 30 Juta 💥
 slug: 30-juta
-date: "2023-07-09T22:30:17Z"
-draft: false
-readingTime: true
+description: Dua bulan sebelum libur Natal & Tahun Baru, konsumen sudah mulai
+  merencanakan belanja mereka?
+categories:
+  - News
+author: Dimas Aji
+date: 2023-07-09T22:30:17Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 Good morning & happy Monday\! 
