@@ -1,11 +1,14 @@
 ---
-title: "Last-Click is Dead? ☠️"
+title: Last-Click is Dead? ☠️
 slug: last-click-is-dead
-date: "2023-09-17T22:30:35Z"
-draft: false
-readingTime: true
+description: Better Not Using Last-Click Attribution on TikTok?
+categories:
+  - News
+author: Dimas Aji
+date: 2023-09-17T22:30:35Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Wishing you a morning as beautiful as your dreams and as productive as your ambitions. Good morning\!_
