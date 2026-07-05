@@ -1,11 +1,14 @@
 ---
 title: Search Console ❤️ BigQuery
 slug: search-console-bigquery
-date: "2023-02-26T22:30:09Z"
-draft: false
-readingTime: true
+description: Mungkin ini salah satu kado terindah dari Google untuk temen-temen SEO Expert?
+categories:
+  - News
+author: Dimas Aji
+date: 2023-02-26T22:30:09Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 Good morning 👋
