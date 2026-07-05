@@ -1,11 +1,14 @@
 ---
 title: $1000 Per Month 🤑
 slug: bayar-rp15-000-000-untuk-centang-emas-di-twitter
-date: "2023-02-12T22:30:32Z"
-draft: false
-readingTime: true
+description: Berlangganan Twitter Blue. Cukup dengan membayar Rp120,000 per bulan?
+categories:
+  - News
+author: Dimas Aji
+date: 2023-02-12T22:30:32Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 **Good Morning** 👋
