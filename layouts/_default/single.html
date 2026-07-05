@@ -9,7 +9,7 @@
       </svg>
       {{ with .Params.categories }}
       {{ range first 1 . }}
-      <span class="post-breadcrumb-current">{{ . }}</span>
+      <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}/" class="post-breadcrumb-current">{{ . }}</a>
       {{ end }}
       {{ end }}
     </div>
