@@ -1,11 +1,14 @@
 ---
 title: Aduh Bocor 💦
 slug: aduh-bocor
-date: "2023-01-29T22:25:16Z"
-draft: false
-readingTime: true
+description: Kebocoran source code mesin pencari terbesar ke-4 di dunia, Yandex!
+categories:
+  - News
+author: Dimas Aji
+date: 2023-01-29T22:25:16Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 **Happy Monday :\)**
