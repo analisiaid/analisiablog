@@ -1,11 +1,14 @@
 ---
 title: Welcome X
 slug: welcome-x
-date: "2023-07-30T22:30:58Z"
-draft: false
-readingTime: true
+description: DSA & Display Campaign is now PMax. New Twitter, New Ad Tag.
+categories:
+  - News
+author: Dimas Aji
+date: 2023-07-30T22:30:58Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Hello, snooze button enthusiasts\!_
