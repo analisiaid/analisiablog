@@ -1,11 +1,15 @@
 ---
 title: Google PMax ❤️ Store Sales
 slug: google-pmax-store-sales
-date: "2023-06-26T04:20:33Z"
-draft: false
-readingTime: true
+description: Why Does Page Performance Matter? Gen Z (18-24) Lebih Suka Baca
+  Berita di Socmed?
+categories:
+  - News
+author: Dimas Aji
+date: 2023-06-26T04:20:33Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Good morning\! It's Monday, the start of a fresh new week._
