@@ -26,4 +26,6 @@ Every new article lands in your inbox—along with exclusive campaign teardowns,
 
 Your subscription unlocks the complete archive, giving you access to every playbook, teardown, experiment, and future publication in one searchable library.
 
+{{< subscribe-cta >}}
+
 Because good marketing compounds—and so should your knowledge.
