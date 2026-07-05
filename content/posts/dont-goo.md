@@ -1,11 +1,14 @@
 ---
-title: "Don't Fool Me Google! 😏"
+title: Don't Fool Me Google! 😏
 slug: dont-goo
-date: "2023-02-19T22:30:40Z"
-draft: false
-readingTime: true
+description: Pernah pakai fitur Channel di Telegram? Yes, it's basically the same thing.
+categories:
+  - News
+author: Dimas Aji
+date: 2023-02-19T22:30:40Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 Good Morning 👋
