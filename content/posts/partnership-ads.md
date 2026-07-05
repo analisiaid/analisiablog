@@ -1,11 +1,14 @@
 ---
 title: Bye Branded Content Ads 👩‍❤️‍👨
 slug: partnership-ads
-date: "2023-05-08T08:37:05Z"
-draft: false
-readingTime: true
+description: Introducing Partnership Ads by Instagram (formerly Branded Content Ads).
+categories:
+  - News
+author: Dimas Aji
+date: 2023-05-08T08:37:05Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 Good afternoon\! We hope you had a wonderful weekend. Wishing you a pleasant and productive rest of your afternoon 🖤
