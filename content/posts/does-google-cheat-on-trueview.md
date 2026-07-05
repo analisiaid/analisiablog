@@ -1,11 +1,14 @@
 ---
-title: "Does Google Cheat on TrueView? 💔"
+title: Does Google Cheat on TrueView? 💔
 slug: does-google-cheat-on-trueview
-date: "2023-07-02T22:30:33Z"
-draft: false
-readingTime: true
+description: Google Has Been Cheating on TrueView Video Campaigns?
+categories:
+  - News
+author: Dimas Aji
+date: 2023-07-02T22:30:33Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Hello 👋 Happy Monday\! I hope you have a fantastic start to your week._
