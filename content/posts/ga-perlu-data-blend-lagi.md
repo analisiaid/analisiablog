@@ -1,11 +1,15 @@
 ---
 title: Ga perlu data blend lagi 🍻
 slug: ga-perlu-data-blend-lagi
-date: "2023-06-18T21:08:38Z"
-draft: false
-readingTime: true
+description: Rilis di minggu lalu Google menambakan 100++ dimensions and metrics
+  baru ke GA4 Connector di Looker Studio
+categories:
+  - News
+author: Dimas Aji
+date: 2023-06-18T21:08:38Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 🌞 Rise and shine, and welcome to another exciting week in the world of digital marketing\! ☕️✨ Whether you're sipping your coffee or tea, let's kick-start this Monday morning with a burst of inspiration and insights to fuel your marketing strategies.
