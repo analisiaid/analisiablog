@@ -1,11 +1,14 @@
 ---
 title: Threads App Is ✨ But...
 slug: trends-app-declining
-date: "2023-07-17T04:57:25Z"
-draft: false
-readingTime: true
+description: Threads App Is Better Than Twitter, But... Bisa Beli Centang Biru IG?
+categories:
+  - News
+author: Dimas Aji
+date: 2023-07-17T04:57:25Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Good morning, friends\! May your day be as bright as the rising sun_ 🌤️
