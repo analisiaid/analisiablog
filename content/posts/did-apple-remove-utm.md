@@ -1,11 +1,14 @@
 ---
-title: "Did Apple Remove UTM? 🥷"
+title: Did Apple Remove UTM? 🥷
 slug: did-apple-remove-utm
-date: "2023-06-11T22:30:59Z"
-draft: false
-readingTime: true
+description: "[New Study] Nearly 90% of Consumers No Longer Trust Influencers"
+categories:
+  - News
+author: Dimas Aji
+date: 2023-06-11T22:30:59Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Good morning\!_
