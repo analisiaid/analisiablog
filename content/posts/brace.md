@@ -1,11 +1,14 @@
 ---
-title: "Brace! 🫨"
+title: Brace! 🫨
 slug: brace
-date: "2023-09-04T04:49:13Z"
-draft: false
-readingTime: true
+description: Cara kepoin Influencer di Facebook & Instagram
+categories:
+  - News
+author: Dimas Aji
+date: 2023-09-04T04:49:13Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Good morning 👀_
