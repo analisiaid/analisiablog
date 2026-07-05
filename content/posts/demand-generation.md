@@ -1,11 +1,14 @@
 ---
 title: Demand Gen Campaign 🧪
 slug: demand-generation
-date: "2023-08-20T22:30:10Z"
-draft: false
-readingTime: true
+description: Official Google Sheets <> GA4 Connector is Now Available
+categories:
+  - News
+author: Dimas Aji
+date: 2023-08-20T22:30:10Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Morning snooze button enthusiasts ⏰ Remember, it's time to break up with your bed and start a love affair with productivity\!_
