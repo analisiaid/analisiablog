@@ -1,11 +1,14 @@
 ---
-title: "X Premium Jadi Rp2,400/bulan 🐦"
+title: X Premium Jadi Rp2,400/bulan 🐦
 slug: twitter-premium-jadi-rp2-400-bulan
-date: "2023-10-29T22:30:58Z"
-draft: false
-readingTime: true
+description: Official! Paket Berlangganan Twitter mulai dari Rp2,400 / bulan.
+categories:
+  - News
+author: Dimas Aji
+date: 2023-10-29T22:30:58Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 "Dua tiga upin dan ipin, Rajin menabug dan bersahaja.
