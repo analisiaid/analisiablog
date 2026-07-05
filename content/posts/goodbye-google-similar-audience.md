@@ -1,11 +1,14 @@
 ---
 title: Bye Google Similar Audience 😢
 slug: goodbye-google-similar-audience
-date: "2023-04-30T22:30:40Z"
-draft: false
-readingTime: true
+description: Old Google Analytics (UA) Will Be Sunset on July 1st, 2024
+categories:
+  - News
+author: Dimas Aji
+date: 2023-04-30T22:30:40Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 We apologize for not sending the newsletter letter last week. Also, we hope you and your family had a very happy Eid & holidays 🙏
