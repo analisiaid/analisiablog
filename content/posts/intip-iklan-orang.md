@@ -1,11 +1,14 @@
 ---
 title: Intip Iklan Orang 🫣
 slug: intip-iklan-orang
-date: "2023-04-02T21:30:44Z"
-draft: false
-readingTime: true
+description: Suka penasaran gasi kompetitor lagi jalan iklan apa di Google?
+categories:
+  - News
+author: Dimas Aji
+date: 2023-04-02T21:30:44Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Good Morning_ 👋
