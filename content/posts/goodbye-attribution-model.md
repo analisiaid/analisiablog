@@ -1,11 +1,14 @@
 ---
 title: Goodbye Attribution Model 👋
 slug: goodbye-attribution-model
-date: "2023-04-10T02:59:35Z"
-draft: false
-readingTime: true
+description: Goodbye First-click, linear, time-decay and position-based Attribution Model 👋
+categories:
+  - News
+author: Dimas Aji
+date: 2023-04-10T02:59:35Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Monday morning blues? Not today\! Let's make it a great start to the week\!_
