@@ -1,11 +1,15 @@
 ---
 title: Promotional Ads 🤑
 slug: promotional-ads
-date: "2023-05-21T22:30:40Z"
-draft: false
-readingTime: true
+description: Udah bisa mencoba Promotional Ads, fitur baru dari Meta untuk
+  mengelola promosi online.
+categories:
+  - News
+author: Dimas Aji
+date: 2023-05-21T22:30:40Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Good Morning ☕_
