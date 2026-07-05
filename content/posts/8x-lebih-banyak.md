@@ -1,11 +1,15 @@
 ---
 title: 8x Lebih Banyak 😍
 slug: 8x-lebih-banyak
-date: "2023-05-14T21:56:45Z"
-draft: false
-readingTime: true
+description: The AI Sandbox akan dijadikan sebagai "testing playground" oleh
+  Facebook untuk produk & fitur baru sebelum diluncurkan ke market
+categories:
+  - News
+author: Dimas Aji
+date: 2023-05-14T21:56:45Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 _Good morning and welcome to a brand new week\!_
