@@ -1,11 +1,16 @@
 ---
 title: Info A1 Instagram Nih 🥷
 slug: info-a1-instagram-nih
-date: "2023-03-19T22:30:36Z"
-draft: false
-readingTime: true
+description: Bocoran dari Amy Marietta, Influencer yang setiap bulan selama 3
+  tahun terakhir mewakiki Creators berdiskusi secara langsung dengan Instagram's
+  partner manager.
+categories:
+  - News
+author: Dimas Aji
+date: 2023-03-19T22:30:36Z
 toc: true
-author: analisia id
+readingTime: true
+draft: false
 ---
 
 Rise and shine, it's Monday\!
