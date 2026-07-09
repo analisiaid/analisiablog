@@ -17,6 +17,12 @@ First of all it's an email, it's dropping physical letter to houses.
 
 ![direct mail](/images/uploads/cleanshot-2026-07-09-at-10.13.36-2x.png "direct mail")
 
+## Is It Dead Yet?
+
+According to Google Trends data it's certainly dying but not dead yet. The peak for direct mail was in 2014, since then the search interest slowly declined year over year.
+
+![search trends for direct mail uk](/images/uploads/cleanshot-2026-07-09-at-11.05.36-2x.png "search trends for direct mail uk")
+
 ## Direct Mail Performance Benchmark (UK)
 
 | Campaign Batch          | Batch 1 | Batch 2 | Batch 3 |
