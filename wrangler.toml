@@ -1,4 +1,5 @@
 # Cloudflare Pages project config
+# Build: hugo && npx pagefind --site public
 # Deploy: npx wrangler pages deploy ./public --project-name analisiablog
 
 name = "analisiablog"

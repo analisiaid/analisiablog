@@ -19,6 +19,7 @@
         body: JSON.stringify({
           email: email,
           name: nameInput ? nameInput.value.trim() : '',
+          url: window.location.href,
         }),
       });
 

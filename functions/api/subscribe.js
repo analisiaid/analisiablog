@@ -4,6 +4,21 @@
 // Validates input, adds contact to Resend audience, sends welcome email
 
 const RESEND_API_KEY='YOUR_R..._KEY'
+
+// Extract a URL-safe slug from the subscription page URL.
+// Returns null for homepage, /subscribe/, or missing URL.
+function extractSlug(url) {
+  if (!url) return null
+  try {
+    const path = new URL(url).pathname.replace(/\/+$/, '') // strip trailing slash
+    if (!path || path === '' || path === '/subscribe') return null
+    const slug = path.split('/').filter(Boolean).pop()
+    return slug && /^[a-z0-9][a-z0-9-]*$/.test(slug) ? slug : null
+  } catch {
+    return null
+  }
+}
+
 export async function onRequest(context) {
   const request = context.request
   const env = context.env
@@ -24,7 +39,7 @@ export async function onRequest(context) {
   }
 
   const formData = await request.json()
-  const { email, name, turnstileToken } = formData
+  const { email, name, turnstileToken, url } = formData
 
   // Validate email
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -56,7 +71,7 @@ export async function onRequest(context) {
   const apiKey = env.RESEND_API_KEY || RESEND_API_KEY
   const AUDIENCE_ID = '8642485b-ad7c-498d-a00d-10db8dbbf100'
 
-  await fetch(`https://api.resend.com/audiences/${AUDIENCE_ID}/contacts`, {
+  const createContactRes = await fetch(`https://api.resend.com/audiences/${AUDIENCE_ID}/contacts`, {
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${apiKey}`,
@@ -69,25 +84,51 @@ export async function onRequest(context) {
     }),
   })
 
-  // Send welcome email (inline HTML)
-  const welcomeHtml = '<!DOCTYPE html><html><head><meta charset="utf-8"><style>body{font-family:Inter,sans-serif;line-height:1.6;color:#111;max-width:560px;margin:0 auto;padding:32px 24px}h1{font-family:Plus Jakarta Sans,sans-serif;font-size:28px;color:#111}.brand{color:#FF4C1E}</style></head><body><div class="brand" style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.3px;margin-bottom:8px">Analisia Blog</div><h1>Welcome to the weekly digest.</h1><p>Thanks for subscribing' + (name ? ", " + name : "") + '.</p><p>Every Tuesday morning, you will get one tactical breakdown from our team — bidding strategies, creative tests, analytics frameworks — pulled from real client accounts.</p><p>See you Tuesday.</p><p style="color:#666;font-size:13px;margin-top:32px">Analisia Team</p></body></html>'
-  const sendEmailRes = await fetch('https://api.resend.com/emails', {
+  let contactId = null
+  if (createContactRes.ok) {
+    const contactData = await createContactRes.json()
+    contactId = contactData.id
+  } else {
+    const err = await createContactRes.text()
+    console.error('Resend create contact error:', err)
+  }
+
+  // Send custom event to trigger Resend automations (welcome flow, etc.)
+  await fetch('https://api.resend.com/events/send', {
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${apiKey}`,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      from: 'Analisia Blog <newsletter@blog.analisia.id>',
-      to: [email],
-      subject: 'Welcome to the Analisia weekly digest',
-      html: welcomeHtml,
+      event: 'subscriber.joined',
+      email: email,
+      payload: {
+        name: name || '',
+        url: url || '',
+      },
     }),
   })
 
-  if (!sendEmailRes.ok) {
-    const err = await sendEmailRes.text()
-    console.error('Resend send email error:', err)
+  // Send per-post event for post-specific Resend automations
+  // e.g. subscriber.joined.ga4-audit-tool
+  const slug = extractSlug(url)
+  if (slug) {
+    await new Promise(r => setTimeout(r, 600))
+    await fetch('https://api.resend.com/events/send', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        event: `subscriber.joined.${slug}`,
+        email: email,
+        payload: {
+          name: name || '',
+        },
+      }),
+    })
   }
 
   return new Response(JSON.stringify({ success: true }), {
