@@ -3,6 +3,8 @@ title: ChatGPT Ads (Updated, July 2026)
 slug: chatgpt-ads
 description: Everything you need to know about ChatGPT Ads -- post will be
   updated regularly.
+categories:
+  - Guides
 author: Dimas Aji
 date: 2026-07-10T14:18:00.000+01:00
 cover: /images/uploads/cleanshot-2026-07-10-at-14.18.49-2x.png
