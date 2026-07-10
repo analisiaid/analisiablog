@@ -4,7 +4,6 @@
     "wrangler": "^4.105.0"
   },
   "dependencies": {
-    "@pagefind/darwin-arm64": "^1.5.2",
     "@pagefind/default-ui": "^1.5.2",
     "pagefind": "^1.5.2"
   }
