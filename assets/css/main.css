@@ -1038,12 +1038,7 @@ img {
 }
 
 .post-body blockquote p {
-  font-family: var(--font-heading);
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 1.45;
   color: var(--text-primary);
-  font-style: normal;
 }
 
 /* Code blocks (inline code within post-body) */
@@ -2169,9 +2164,6 @@ img {
   }
   .post-body p {
     font-size: 17px;
-  }
-  .post-body blockquote p {
-    font-size: 19px;
   }
   .post-body pre {
     padding: 16px 20px;
