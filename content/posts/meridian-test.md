@@ -7,7 +7,7 @@ categories:
   - Analytics
 author: Dimas Aji
 date: 2025-03-15T07:31:50.000Z
-cover: /images/uploads/cleanshot-2026-07-28-at-10.51.02-2x.png
+cover: https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Meridian_MMM-Blog_header-22_Jan_.width-2200.format-webp.webp
 toc: true
 readingTime: true
 draft: false
