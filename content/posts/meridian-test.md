@@ -7,7 +7,7 @@ categories:
   - Analytics
 author: Dimas Aji
 date: 2025-03-15T07:31:50.000Z
-cover: /images/uploads/josh-appel-NeTPASr-bmQ-unsplash.jpg
+cover: /images/uploads/cleanshot-2026-07-28-at-10.51.02-2x.png
 toc: true
 readingTime: true
 draft: false
